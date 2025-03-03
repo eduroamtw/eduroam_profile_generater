@@ -1,0 +1,2 @@
+# eduroam_profile_generater
+從測試網站自動生成設定檔的工具
