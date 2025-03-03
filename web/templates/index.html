@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字處理工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="all">
+        <h2>請輸入有支援 eduroam 帳號驗證的 Realm </h2>
+        <p>例如：@ntu.edu.tw</p>
+        <textarea id="textInput" rows="5" cols="50"></textarea><br>
+        <button onclick="processText()">提交</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        function processText() {
+            let formData = new FormData();
+            let textInput = document.getElementById("textInput").value;
+
+            if (!textInput.trim()) {
+                alert("請輸入文字");
+                return;
+            }
+
+            formData.append("text", textInput);
+
+            fetch("/process", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("處理失敗");
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                let url = window.URL.createObjectURL(blob);
+                let a = document.createElement("a");
+                a.href = url;
+                a.download = "output.txt";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                document.getElementById("message").innerText = "處理完成，檔案已下載";
+            })
+            .catch(error => {
+                document.getElementById("message").innerText = "錯誤：" + error.message;
+            });
+        }
+    </script>
+</body>
+</html>

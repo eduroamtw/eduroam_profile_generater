@@ -1,0 +1,1016 @@
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@portal.cmu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@stmail.cnu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.cpu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@csmu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@csu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@ctbc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ctcn.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@wifi.ctu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ctu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ctust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "CTUST Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@ccs.cust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@cc.cust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@ccs.hc.cust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@cc.hc.cust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@cute.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "radius-ubuntu2204"
+DNS: "radius-ubuntu2204"
+Realm: "cute.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+未找到相關根憑證
+
+realm: anonymous@stu.cute.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "radius-ubuntu2204"
+DNS: "radius-ubuntu2204"
+Realm: "stu.cute.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+未找到相關根憑證
+
+realm: anonymous@cycu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "EAP TLS Server"
+未找到 DNS 資訊
+
+realm: anonymous@cyut.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "USERTrust RSA Certification Authority"
+DNS: "*.cyut.edu.tw"
+Realm: "cyut.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+已在本地資料庫找到憑證
+
+realm: anonymous@dila.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "DDBC-Radius.ddbc.edu.tw"
+未找到 DNS 資訊
+
+realm: anonymous@mail.dyu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@cloud.dyu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@fcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@o365.fcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.fgu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@fju.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@fy.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@live.fy.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@hcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@student.hdut.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@cloud.hfu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@hk.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@hsc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.hust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.hwai.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ms1.hwai.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@isu.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@just.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@kmu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ksu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@gm.lhu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@gm.lhu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@mail.lhu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@eduroam.mcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Secure SSL Certification Authority"
+DNS: "*.mcu.edu.tw"
+Realm: "eduroam.mcu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+未找到相關根憑證
+
+realm: anonymous@mail2.mcut.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@meiho.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Root Certification Authority"
+DNS: "*.meiho.edu.tw"
+Realm: "meiho.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+已在本地資料庫找到憑證
+
+realm: anonymous@live.mmc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@must.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "radius"
+DNS: "radius"
+Realm: "must.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  Entrust Certification Authority - L1M
+
+正在依照根憑證名稱去查詢資料庫: 未找到該憑證
+
+realm: anonymous@eduroam.nccu.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "AAA Certificate Services"
+DNS: "*.nccu.edu.tw"
+Realm: "eduroam.nccu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  Entrust.net Secure Server Certification Authority
+
+正在依照根憑證名稱去查詢資料庫: 未找到該憑證
+
+realm: anonymous@nchu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "National Chung Hsing University Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@mail.nchu.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "National Chung Hsing University Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@dragon.nchu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "National Chung Hsing University Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@eduroam.ncku.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "TWCA Root Certification Authority"
+DNS: "aaa.ncku.edu.tw"
+Realm: "eduroam.ncku.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+已在本地資料庫找到憑證
+
+realm: anonymous@ncnu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "radius-2-17"
+DNS: "radius-2-17"
+Realm: "ncnu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+未找到相關根憑證
+
+realm: anonymous@nycu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Global Root CA"
+DNS: "wlan.nycu.edu.tw"
+Realm: "nycu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+已在本地資料庫找到憑證
+
+realm: anonymous@cc.ncu.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "TWCA Global Root CA"
+DNS: "wireless.ncu.edu.tw"
+Realm: "cc.ncu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+已在本地資料庫找到憑證
+
+realm: anonymous@alumni.ncu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@cc.ncue.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@mail.ncue.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@student.ncut.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ndhu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Secure SSL Certification Authority"
+DNS: "8021x.ndhu.edu.tw"
+Realm: "ndhu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  TWCA Global Root CA
+
+正在依照根憑證名稱去查詢資料庫: 已找到憑證
+
+realm: anonymous@ctx10.nfu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nhu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@niu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Secure SSL Certification Authority"
+DNS: "*.niu.edu.tw"
+Realm: "niu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  TWCA Global Root CA
+
+正在依照根憑證名稱去查詢資料庫: 已找到憑證
+
+realm: anonymous@nknu.edu.tw
+偵測開始...
+PAP 憑證已拿取 / MSCHAP v2 憑證未拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@nkuht.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nkust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nkut.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nou.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@stmail.nptu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.nptu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@gms.npu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@ems.npu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@mail.npust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@stu.nqu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nqu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@wifi.nsysu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.ntcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@wlan.nthu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.ntin.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@eduroam.ntnu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntou.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@webmail.ntpu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.ntpu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntsu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nttu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ms108.nttu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@eduroam.ntu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@art365.ntua.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntub.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@eduroam.ntue.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntus.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.ntust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntut.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nuk.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@nutc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.nutn.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@stumail.nutn.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@nuu.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@yuntech.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Yuntech Radius Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@ocu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@pu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "Example Certificate Authority"
+未找到 DNS 資訊
+
+realm: anonymous@scu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@wlan.shu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@student.szmc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tajen.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@student.tajen.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tcpa.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@rad.tcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ems.tcust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@thu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tku.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@o365.tku.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tmu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@takming.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tnnua.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@www.tnua.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tpcu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ttcs.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ttu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ntou.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@o365.mitust.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@tut.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@uch.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@usc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@utaipei.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@vnu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ms.wfu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.wtuc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@mail.ypu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@stu.mail.ypu.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@mail.yzu.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@chc.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@cy.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@hcc.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@tmail.ilc.edu.tw
+請求過於頻繁，請稍後再試
+
+ 1 seconds remaining.
+
+realm: anonymous@kh.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "ePKI Root Certification Authority - G2"
+DNS: "wireless.kh.edu.tw"
+Realm: "kh.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+
+realm: anonymous@kl.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Secure SSL Certification Authority"
+DNS: "*.kl.edu.tw"
+Realm: "kl.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+未找到相關根憑證
+
+realm: anonymous@km.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@matsu.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "radius"
+DNS: "radius"
+Realm: "matsu.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  Entrust Certification Authority - L1M
+
+正在依照根憑證名稱去查詢資料庫: 未找到該憑證
+
+realm: anonymous@webmail.mlc.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "TWCA Secure SSL Certification Authority"
+DNS: "*.mlc.edu.tw"
+Realm: "webmail.mlc.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  TWCA Global Root CA
+
+正在依照根憑證名稱去查詢資料庫: 已找到憑證
+
+realm: anonymous@ntct.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "TWCA Secure SSL Certification Authority"
+DNS: "*.ntct.edu.tw"
+Realm: "ntct.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  TWCA Global Root CA
+
+正在依照根憑證名稱去查詢資料庫: 已找到憑證
+
+realm: anonymous@ntpc.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "R10"
+DNS: "radius.ntpc.edu.tw"
+Realm: "ntpc.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  WE1
+
+正在依照根憑證名稱去查詢資料庫: 未找到該憑證
+
+realm: anonymous@ptc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "ePKI Root Certification Authority - G2"
+DNS: "wifi.ptc.edu.tw"
+Realm: "ptc.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+
+realm: anonymous@tc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "ePKI Root Certification Authority - G2"
+DNS: "ap.tc.edu.tw"
+Realm: "tc.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+
+realm: anonymous@tn.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "TWCA Global Root CA"
+DNS: "wifiauth.tn.edu.tw"
+Realm: "tn.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+已在本地資料庫找到憑證
+
+realm: anonymous@tp.edu.tw
+偵測開始...
+MSCHAP v2 憑證已拿取 / PAP 憑證未拿取
+
+Cert: "R10"
+DNS: "aaa.tp.edu.tw"
+Realm: "tp.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-PEAP-MSCHAPv2.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  WE1
+
+正在依照根憑證名稱去查詢資料庫: 未找到該憑證
+
+realm: anonymous@dove.ttct.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "R11"
+DNS: "*.ttct.edu.tw"
+Realm: "dove.ttct.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+Rootcert:  R10
+
+正在依照根憑證名稱去查詢資料庫: 未找到該憑證
+
+realm: anonymous@stu.ttct.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證已拿取
+
+Cert: "R11"
+DNS: "*.ttct.edu.tw"
+Realm: "stu.ttct.edu.tw"
+
+Template/eduroam-eap-generic-anonymous-Both.eap-config 
+成功複製到編輯暫存目錄！
+
+正在從本地查詢憑證資料庫資訊...
+未在本地資料庫找到該憑證
+
+正在從 crt.sh 查詢根憑證資訊...
+未找到相關根憑證
+
+realm: anonymous@tyc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+realm: anonymous@ylc.edu.tw
+偵測開始...
+MSCHAP v2 / PAP 憑證未拿取，未知的錯誤
+
+my_enve0pwr@e0pwr-MBP get_eduroam_autoconfig % ｃ

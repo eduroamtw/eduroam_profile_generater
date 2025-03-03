@@ -1,0 +1,1346 @@
+HTTP/1.1 200 OK
+Date: Sun, 02 Mar 2025 13:35:01 GMT
+Server: Apache
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+<html><head><title>eduroam test</title></head><body>正将您输入的信息发给radius服务器测试，测试结果汇总如下：<p>
+<table border cellpadding=2 cellspacing=0><tr><td>认证类型</td><td>测试结果</td></tr>
+<tr><td><a href=#mschapv2>EAP-PEAP MSCHAPv2</a><br></td><td><div id=mschapv2>正在测试...</div></td></tr>
+<tr><td><a href=#pap>EAP-TTLS PAP</a><br></td><td><div id=pap>正在测试...</div></td></tr>
+</table><p>
+结果说明：<br><span style="color: red;">FAILURE，认证失败</span>：认证测试过程中出现了错误<br><span style="color: green;">OK，认证过程正常</span>：认证环节正常<p>详细结果过程:<p><a id=mschapv2><h2>开始测试 EAP-PEAP MSCHAPv2 ...</h2></a><h3>使用的配置文件</h3><pre>
+network={
+    ssid="eduroam"
+    key_mgmt=WPA-EAP
+    eap=PEAP
+    identity="anonymous@takming.edu.tw"
+    anonymous_identity="anonymous@takming.edu.tw"
+    password="anonymous"
+    phase2="autheap=MSCHAPV2"
+}</pre>
+<script language="JavaScript">document.getElementById("mschapv2").innerHTML = "<span style=\"color: red;\">FAILURE，认证失败</span>"</script><h3>测试结果: <span style="color: red;">FAILURE，认证失败</span></h3><pre>
+Reading configuration file '/dev/shm/radcfg.2493.conf'
+Line: 1 - start of a new network block
+ssid - hexdump_ascii(len=7):
+     65 64 75 72 6f 61 6d                              eduroam         
+key_mgmt: 0x1
+eap methods - hexdump(len=16): 00 00 00 00 19 00 00 00 00 00 00 00 00 00 00 00
+identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+anonymous_identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+password - hexdump_ascii(len=9):
+     61 6e 6f 6e 79 6d 6f 75 73                        anonymous       
+phase2 - hexdump_ascii(len=16):
+     61 75 74 68 65 61 70 3d 4d 53 43 48 41 50 56 32   autheap=MSCHAPV2
+Priority group 0
+   id=0 ssid='eduroam'
+Authentication server 127.0.0.1:1812
+RADIUS local address: 127.0.0.1:51604
+ENGINE: Loading dynamic engine
+ENGINE: Loading dynamic engine
+EAPOL: SUPP_PAE entering state DISCONNECTED
+EAPOL: KEY_RX entering state NO_KEY_RECEIVE
+EAPOL: SUPP_BE entering state INITIALIZE
+EAP: EAP entering state DISABLED
+EAPOL: External notification - portValid=0
+EAPOL: External notification - portEnabled=1
+EAPOL: SUPP_PAE entering state CONNECTING
+EAPOL: SUPP_BE entering state IDLE
+EAP: EAP entering state INITIALIZE
+EAP: EAP entering state IDLE
+Sending fake EAP-Request-Identity
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_PAE entering state RESTART
+EAP: EAP entering state INITIALIZE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_PAE entering state AUTHENTICATING
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=0 method=1 vendor=0 vendorMethod=0
+EAP: EAP entering state IDENTITY
+CTRL-EVENT-EAP-STARTED EAP authentication started
+EAP: Status notification: started (param=)
+EAP: EAP-Request Identity data - hexdump_ascii(len=0):
+EAP: using anonymous identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=29)
+TX EAP -> RADIUS - hexdump(len=29): 02 00 00 1d 01 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77
+Encapsulating EAP message into a RADIUS packet
+Learned identity from EAP-Response-Identity - hexdump(len=24): 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=0 length=162
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=31
+      Value: 0200001d01616e6f6e796d6f75734074616b6d696e672e6564752e7477
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 85ff051ba019e35c637e532c699e401a
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 80 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=0 length=80
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 23fcb188199f19b636a34c289b2fb53c
+   Attribute 79 (EAP-Message) length=24
+      Value: 010100160410c8ab0de41769736070579684ff531f1f
+   Attribute 24 (State) length=18
+      Value: e810f7e5e811f3a4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.84 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=1 len=22) from RADIUS server: EAP-Request-MD5 (4)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=1 method=4 vendor=0 vendorMethod=0
+EAP: EAP entering state GET_METHOD
+EAP: configuration does not allow: vendor 0 method 4
+EAP: vendor 0 method 4 not allowed
+CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=4 -> NAK
+EAP: Status notification: refuse proposed method (param=MD5)
+EAP: Building EAP-Nak (requested type 4 vendor=0 method=0 not allowed)
+EAP: allowed methods - hexdump(len=1): 19
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 01 00 06 03 19
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=1 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020100060319
+   Attribute 24 (State) length=18
+      Value: e810f7e5e811f3a4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: e176e21ee12e8c0566b7d7c7e5e4a344
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 64 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=1 length=64
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 82513ba209701e20e0426c85c89fd485
+   Attribute 79 (EAP-Message) length=8
+      Value: 010200061920
+   Attribute 24 (State) length=18
+      Value: e810f7e5e912eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.83 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=2 len=6) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=2 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state GET_METHOD
+CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=25
+EAP: Status notification: accept proposed method (param=PEAP)
+EAP: Initialize selected EAP method: vendor 0 method 25 (PEAP)
+TLS: Phase2 EAP types - hexdump(len=40): 00 00 00 00 04 00 00 00 00 00 00 00 1a 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 11 00 00 00
+TLS: using phase1 config options
+CTRL-EVENT-EAP-METHOD EAP vendor 0 method 25 (PEAP) selected
+EAP: EAP entering state METHOD
+SSL: Received packet(len=6) - Flags 0x20
+EAP-PEAP: Start (server ver=0, own ver=1)
+EAP-PEAP: Using PEAP version 0
+SSL: (where=0x10 ret=0x1)
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:before/connect initialization
+OpenSSL: TX ver=0x303 content_type=22 (handshake/client hello)
+OpenSSL: Message - hexdump(len=238): 01 00 00 ea 03 03 67 c4 5e 87 e1 fa d8 3c dc f4 0c 88 0c 2b fe 73 b1 39 96 bf 8e 95 8c d4 8a 18 c4 03 07 dc 0b e9 00 00 84 c0 30 c0 2c c0 28 c0 24 c0 14 c0 0a 00 a3 00 9f 00 6b 00 6a 00 39 00 38 00 88 00 87 c0 32 c0 2e c0 2a c0 26 c0 0f c0 05 00 9d 00 3d 00 35 00 84 c0 2f c0 2b c0 27 c0 23 c0 13 c0 09 00 a2 00 9e 00 67 00 40 00 33 00 32 00 9a 00 99 00 45 00 44 c0 31 c0 2d c0 29 c0 25 c0 0e c0 04 00 9c 00 3c 00 2f 00 96 00 41 c0 12 c0 08 00 16 00 13 c0 0d c0 03 00 0a 00 07 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 ff 01 00 00 3d 00 0b 00 04 03 00 01 02 00 0a 00 08 00 06 00 19 00 18 00 17 00 0d 00 20 00 1e 06 01 06 02 06 03 05 01 05 02 05 03 04 01 04 02 04 03 03 01 03 02 03 03 02 01 02 02 02 03 00 0f 00 01 01
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv2/v3 write client hello A
+SSL: (where=0x1002 ret=0xffffffff)
+SSL: SSL_connect:error in SSLv2/v3 read server hello A
+SSL: SSL_connect - want more data
+SSL: 243 bytes pending from ssl_out
+SSL: 243 bytes left to be sent out (of total 243 bytes)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b7c4e0
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=253)
+TX EAP -> RADIUS - hexdump(len=253): 02 02 00 fd 19 80 00 00 00 f3 16 03 01 00 ee 01 00 00 ea 03 03 67 c4 5e 87 e1 fa d8 3c dc f4 0c 88 0c 2b fe 73 b1 39 96 bf 8e 95 8c d4 8a 18 c4 03 07 dc 0b e9 00 00 84 c0 30 c0 2c c0 28 c0 24 c0 14 c0 0a 00 a3 00 9f 00 6b 00 6a 00 39 00 38 00 88 00 87 c0 32 c0 2e c0 2a c0 26 c0 0f c0 05 00 9d 00 3d 00 35 00 84 c0 2f c0 2b c0 27 c0 23 c0 13 c0 09 00 a2 00 9e 00 67 00 40 00 33 00 32 00 9a 00 99 00 45 00 44 c0 31 c0 2d c0 29 c0 25 c0 0e c0 04 00 9c 00 3c 00 2f 00 96 00 41 c0 12 c0 08 00 16 00 13 c0 0d c0 03 00 0a 00 07 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 ff 01 00 00 3d 00 0b 00 04 03 00 01 02 00 0a 00 08 00 06 00 19 00 18 00 17 00 0d 00 20 00 1e 06 01 06 02 06 03 05 01 05 02 05 03 04 01 04 02 04 03 03 01 03 02 03 03 02 01 02 02 02 03 00 0f 00 01 01
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=2 length=404
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=255
+      Value: 020200fd1980000000f316030100ee010000ea030367c45e87e1fad83cdcf40c880c2bfe73b13996bf8e958cd48a18c40307dc0be9000084c030c02cc028c024c014c00a00a3009f006b006a0039003800880087c032c02ec02ac026c00fc005009d003d00350084c02fc02bc027c023c013c00900a2009e0067004000330032009a009900450044c031c02dc029c025c00ec004009c003c002f00960041c012c00800160013c00dc003000a0007c011c007c00cc0020005000400ff0100003d000b000403000102000a00080006001900180017000d0020001e060106020603050105020503040104020403030103020303020102020203000f000101
+   Attribute 24 (State) length=18
+      Value: e810f7e5e912eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 7d8ee715e8302cc80425de515e282ed3
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+EAPOL: startWhen --> 0
+Received 1068 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=2 length=1068
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 1135110f962568f4a42ec2f04c4312d3
+   Attribute 79 (EAP-Message) length=255
+      Value: 010303ec19c000000a76160303003e0200003a03035d2f4d885aec25fa3c8d3759c295bd677b9accf9aec79c47409a5d3519aa95d400c030000012ff01000100000b000403000102000f00010116030308d30b0008cf0008cc0003de308203da308202c2a003020102020101300d06092a864886f70d01010b0500308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c652043
+   Attribute 79 (EAP-Message) length=255
+      Value: 6572746966696361746520417574686f72697479301e170d3231303930313030353834375a170d3231313033313030353834375a307c310b3009060355040613024652310f300d06035504080c0652616469757331153013060355040a0c0c4578616d706c6520496e632e3123302106035504030c1a4578616d706c65205365727665722043657274696669636174653120301e06092a864886f70d010901161161646d696e406578616d706c652e6f726730820122300d06092a864886f70d01010105000382010f003082010a02820101009e79c8f55b47bdd736757d096b7ef800bcc209a09238fa6a99df0f1e0f011a9b753264e58959eb85b10f
+   Attribute 79 (EAP-Message) length=255
+      Value: 587fe672d8cc3556e967539dbc776d832a0867844b78db78be4229103166ba50872faa7c90e80a1ed23e5e4997ee191b95103af0fe6b0fa85197856633bf84193e36cde0f2676f3f215e7fa2de32694b6d2d27e0283f174559428e2cba112caf48cd397caec7e94788d2791f8ae8e5b3716044350b7bbd863a2be323259ef1cdab1242cb1779b6799bd28ef3cff733ebd82fef9f78228c5bbfb3d5f112cd1611a531b626d6993d1cfc0e99a367e4078228d8f3550ab53b404d389c53e7c6abf749b3cbdf27939a176c4711e2cbc5fa0e456c0663d2b30203010001a34f304d30130603551d25040c300a06082b0601050507030130360603551d1f042f
+   Attribute 79 (EAP-Message) length=247
+      Value: 302d302ba029a0278625687474703a2f2f7777772e6578616d706c652e636f6d2f6578616d706c655f63612e63726c300d06092a864886f70d01010b0500038201010066483a95cbd766bf1a8315adba9e0d4b9f4837f7561f7210c859367393a0136d3b58f37d79dc2273299a7792c2cef378d4d5decb4b43ca266789b0e53fb6a805bbb3680ac851c501e1f4fcedf91b2567263587e67946465533d8f26918c189c5eb2629c2c87b146942b1da60a6d5458367cc5d83a37fb2df6cc81247e46aabd4eb436072ed1dd0afcfd348698318448770248d7debb95897e131770078c7146039cd8d9b56cf34eae4ed24a992e26a0b732e
+   Attribute 24 (State) length=18
+      Value: e810f7e5ea13eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.83 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=3 len=1004) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=3 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=1004) - Flags 0xc0
+SSL: TLS Message Length: 2678
+SSL: Need 1684 bytes more input data
+SSL: Building ACK (type=25 id=3 ver=0)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b6a760
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 03 00 06 19 00
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=3 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020300061900
+   Attribute 24 (State) length=18
+      Value: e810f7e5ea13eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: a1ca1e959f29efa0dd7abd304e680d4e
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 1064 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=3 length=1064
+   Attribute 80 (Message-Authenticator) length=18
+      Value: e0f2887d4e1f8d9fc883415d0a407116
+   Attribute 79 (EAP-Message) length=255
+      Value: 010403e819401e040785e5ccc120ab35583e3fd6dfb916d91bc7c7e85b5b07714de69cb97bc0f33ff60642291fd324d6ff4572ec1b2cc10c093987abeff1b7e4119f4ba2cbbd09c08ec20a7f9bc711f12b3ebd090004e8308204e4308203cca003020102020900f10ea396435f9dfa300d06092a864886f70d01010b0500308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c
+   Attribute 79 (EAP-Message) length=255
+      Value: 6520436572746966696361746520417574686f72697479301e170d3231303930313030353834375a170d3231313033313030353834375a308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c6520436572746966696361746520417574686f7269747930820122300d06092a864886f70d01010105000382010f003082010a0282010100d9cdba5f425c5ed64cf056e0cd110d
+   Attribute 79 (EAP-Message) length=255
+      Value: f3f67fd8642bed7db11c853d4026d004e29a5997586204d80516d6d48b474c71ac3fd6687e051d466b15d83a6984be7c7507c3a2f9c49d7b75106532edffc4ee38b3cc18e78eaa43bba1d47f2931ff6cee0e5e45a9efce25bede84ee4d6f490f5a56325a270d740a4e8e1c3bf06d190f1f4fd33d2e1cbbbacb98fbc9ab8ae392797bf68c5073e6ad89ca665ba4a5c940f48e481fbde5c6936560d4bf7b3a776856f23b55545428ac27d10e039432d171c7de3ae2ea3ae974b8ffb18b216743c9806b842ba6a00de59757b2dbf7811b24029d26bc857aca20f1ae9baf2de2ca2eea4646be9df31469654c70630eceee37390203010001a3820137308201
+   Attribute 79 (EAP-Message) length=243
+      Value: 33301d0603551d0e04160414ca5f9c3979eab8180ca9b2821cb1330eca48b5763081c80603551d230481c03081bd8014ca5f9c3979eab8180ca9b2821cb1330eca48b576a18199a48196308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c6520436572746966696361746520417574686f72697479820900f10ea396435f9dfa300f0603551d
+   Attribute 24 (State) length=18
+      Value: e810f7e5eb14eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.83 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=4 len=1000) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=4 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=1000) - Flags 0x40
+SSL: Need 690 bytes more input data
+SSL: Building ACK (type=25 id=4 ver=0)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b6db10
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 04 00 06 19 00
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=4 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020400061900
+   Attribute 24 (State) length=18
+      Value: e810f7e5eb14eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 82a75c479399270ed6a278c9b052348f
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 758 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=4 length=758
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 4542c739de2d2a2f430738622933acc5
+   Attribute 79 (EAP-Message) length=255
+      Value: 010502b81900130101ff040530030101ff30360603551d1f042f302d302ba029a0278625687474703a2f2f7777772e6578616d706c652e6f72672f6578616d706c655f63612e63726c300d06092a864886f70d01010b050003820101000ca3d319731a68174b6279528021ab9676a07717a27c1de8059c683d237093573cd1ca4c5ba7605f3d29b637c811beb287a6ab4c43463d9f1c04a15b1869b2882f9de7d4f4c438e3fa1b9adc30d30f47d5ea6dcd6e0484ec0a82d3e4cdd9cf1c52ff5ef723ffccd48e7cf6a0530f65ca3a38cc2dc4dbde109b44730b338cd0c62fed3870e8c6b0beb33ebdc683c2e6c8b8f651017f3315eb8e702c760db2592f
+   Attribute 79 (EAP-Message) length=255
+      Value: db2242a011a8815a8b4e687fbdc96cf5da1d3a922c2cac8e382fd16aa40f38fb77d757096f8291ef69895c99734ac3937ef0769488da40ae963145ec311162883904938adf128c164fa1ad4f5825d6fb35574cef9fae6f1d96f2b13b0b6f767e160303014d0c00014903001741046c1ccb6f5744147a191838e7d51b908040804ca183004e0c8c6f364e820a6155b443e8021207bfae8fbffe3278a59e44e6561586d6ebdc586212d10e5d13273406010100958c889b0333a8243eaa10863e28687597efae953f57e4de15f12afdf64c2fd3242b6439f49a523f8fbe5b8ce7bfe4c025e8646cd4c0db928c16705d65583dfaedc18a9fa61d458dad1238
+   Attribute 79 (EAP-Message) length=192
+      Value: fbb50876d8d3df934aaa43cf86822894d8e28c05169d839503dc955ac93459cdf46d98f7a578312ee9d334f15833f46734f1cb08cfa72657e4ba887bd82ddae5a1971b8190ba2c575d41206a465d65ddb3cc3c5fdfb8d91d1b9f98b2504bc4df41335879d10f7927721decd396e30e3f3ca26ff38d42b4f088c51e8e3059bece3a7dc40c825b3df1bba48eea2484a604c616ba39132e1f34fea0e48f1d178fc9b971ccea936f0887b9162b0a2b34e86dd64775b5c316030300040e000000
+   Attribute 24 (State) length=18
+      Value: e810f7e5ec15eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.84 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=5 len=696) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=5 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=696) - Flags 0x00
+OpenSSL: RX ver=0x303 content_type=22 (handshake/server hello)
+OpenSSL: Message - hexdump(len=62): 02 00 00 3a 03 03 5d 2f 4d 88 5a ec 25 fa 3c 8d 37 59 c2 95 bd 67 7b 9a cc f9 ae c7 9c 47 40 9a 5d 35 19 aa 95 d4 00 c0 30 00 00 12 ff 01 00 01 00 00 0b 00 04 03 00 01 02 00 0f 00 01 01
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server hello A
+OpenSSL: RX ver=0x303 content_type=22 (handshake/certificate)
+OpenSSL: Message - hexdump(len=2259): 0b 00 08 cf 00 08 cc 00 03 de 30 82 03 da 30 82 02 c2 a0 03 02 01 02 02 01 01 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30 1e 17 0d 32 31 30 39 30 31 30 30 35 38 34 37 5a 17 0d 32 31 31 30 33 31 30 30 35 38 34 37 5a 30 7c 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 23 30 21 06 03 55 04 03 0c 1a 45 78 61 6d 70 6c 65 20 53 65 72 76 65 72 20 43 65 72 74 69 66 69 63 61 74 65 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 9e 79 c8 f5 5b 47 bd d7 36 75 7d 09 6b 7e f8 00 bc c2 09 a0 92 38 fa 6a 99 df 0f 1e 0f 01 1a 9b 75 32 64 e5 89 59 eb 85 b1 0f 58 7f e6 72 d8 cc 35 56 e9 67 53 9d bc 77 6d 83 2a 08 67 84 4b 78 db 78 be 42 29 10 31 66 ba 50 87 2f aa 7c 90 e8 0a 1e d2 3e 5e 49 97 ee 19 1b 95 10 3a f0 fe 6b 0f a8 51 97 85 66 33 bf 84 19 3e 36 cd e0 f2 67 6f 3f 21 5e 7f a2 de 32 69 4b 6d 2d 27 e0 28 3f 17 45 59 42 8e 2c ba 11 2c af 48 cd 39 7c ae c7 e9 47 88 d2 79 1f 8a e8 e5 b3 71 60 44 35 0b 7b bd 86 3a 2b e3 23 25 9e f1 cd ab 12 42 cb 17 79 b6 79 9b d2 8e f3 cf f7 33 eb d8 2f ef 9f 78 22 8c 5b bf b3 d5 f1 12 cd 16 11 a5 31 b6 26 d6 99 3d 1c fc 0e 99 a3 67 e4 07 82 28 d8 f3 55 0a b5 3b 40 4d 38 9c 53 e7 c6 ab f7 49 b3 cb df 27 93 9a 17 6c 47 11 e2 cb c5 fa 0e 45 6c 06 63 d2 b3 02 03 01 00 01 a3 4f 30 4d 30 13 06 03 55 1d 25 04 0c 30 0a 06 08 2b 06 01 05 05 07 03 01 30 36 06 03 55 1d 1f 04 2f 30 2d 30 2b a0 29 a0 27 86 25 68 74 74 70 3a 2f 2f 77 77 77 2e 65 78 61 6d 70 6c 65 2e 63 6f 6d 2f 65 78 61 6d 70 6c 65 5f 63 61 2e 63 72 6c 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 03 82 01 01 00 66 48 3a 95 cb d7 66 bf 1a 83 15 ad ba 9e 0d 4b 9f 48 37 f7 56 1f 72 10 c8 59 36 73 93 a0 13 6d 3b 58 f3 7d 79 dc 22 73 29 9a 77 92 c2 ce f3 78 d4 d5 de cb 4b 43 ca 26 67 89 b0 e5 3f b6 a8 05 bb b3 68 0a c8 51 c5 01 e1 f4 fc ed f9 1b 25 67 26 35 87 e6 79 46 46 55 33 d8 f2 69 18 c1 89 c5 eb 26 29 c2 c8 7b 14 69 42 b1 da 60 a6 d5 45 83 67 cc 5d 83 a3 7f b2 df 6c c8 12 47 e4 6a ab d4 eb 43 60 72 ed 1d d0 af cf d3 48 69 83 18 44 87 70 24 8d 7d eb b9 58 97 e1 31 77 00 78 c7 14 60 39 cd 8d 9b 56 cf 34 ea e4 ed 24 a9 92 e2 6a 0b 73 2e 1e 04 07 85 e5 cc c1 20 ab 35 58 3e 3f d6 df b9 16 d9 1b c7 c7 e8 5b 5b 07 71 4d e6 9c b9 7b c0 f3 3f f6 06 42 29 1f d3 24 d6 ff 45 72 ec 1b 2c c1 0c 09 39 87 ab ef f1 b7 e4 11 9f 4b a2 cb bd 09 c0 8e c2 0a 7f 9b c7 11 f1 2b 3e bd 09 00 04 e8 30 82 04 e4 30 82 03 cc a0 03 02 01 02 02 09 00 f1 0e a3 96 43 5f 9d fa 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30 1e 17 0d 32 31 30 39 30 31 30 30 35 38 34 37 5a 17 0d 32 31 31 30 33 31 30 30 35 38 34 37 5a 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 d9 cd ba 5f 42 5c 5e d6 4c f0 56 e0 cd 11 0d f3 f6 7f d8 64 2b ed 7d b1 1c 85 3d 40 26 d0 04 e2 9a 59 97 58 62 04 d8 05 16 d6 d4 8b 47 4c 71 ac 3f d6 68 7e 05 1d 46 6b 15 d8 3a 69 84 be 7c 75 07 c3 a2 f9 c4 9d 7b 75 10 65 32 ed ff c4 ee 38 b3 cc 18 e7 8e aa 43 bb a1 d4 7f 29 31 ff 6c ee 0e 5e 45 a9 ef ce 25 be de 84 ee 4d 6f 49 0f 5a 56 32 5a 27 0d 74 0a 4e 8e 1c 3b f0 6d 19 0f 1f 4f d3 3d 2e 1c bb ba cb 98 fb c9 ab 8a e3 92 79 7b f6 8c 50 73 e6 ad 89 ca 66 5b a4 a5 c9 40 f4 8e 48 1f bd e5 c6 93 65 60 d4 bf 7b 3a 77 68 56 f2 3b 55 54 54 28 ac 27 d1 0e 03 94 32 d1 71 c7 de 3a e2 ea 3a e9 74 b8 ff b1 8b 21 67 43 c9 80 6b 84 2b a6 a0 0d e5 97 57 b2 db f7 81 1b 24 02 9d 26 bc 85 7a ca 20 f1 ae 9b af 2d e2 ca 2e ea 46 46 be 9d f3 14 69 65 4c 70 63 0e ce ee 37 39 02 03 01 00 01 a3 82 01 37 30 82 01 33 30 1d 06 03 55 1d 0e 04 16 04 14 ca 5f 9c 39 79 ea b8 18 0c a9 b2 82 1c b1 33 0e ca 48 b5 76 30 81 c8 06 03 55 1d 23 04 81 c0 30 81 bd 80 14 ca 5f 9c 39 79 ea b8 18 0c a9 b2 82 1c b1 33 0e ca 48 b5 76 a1 81 99 a4 81 96 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 82 09 00 f1 0e a3 96 43 5f 9d fa 30 0f 06 03 55 1d 13 01 01 ff 04 05 30 03 01 01 ff 30 36 06 03 55 1d 1f 04 2f 30 2d 30 2b a0 29 a0 27 86 25 68 74 74 70 3a 2f 2f 77 77 77 2e 65 78 61 6d 70 6c 65 2e 6f 72 67 2f 65 78 61 6d 70 6c 65 5f 63 61 2e 63 72 6c 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 03 82 01 01 00 0c a3 d3 19 73 1a 68 17 4b 62 79 52 80 21 ab 96 76 a0 77 17 a2 7c 1d e8 05 9c 68 3d 23 70 93 57 3c d1 ca 4c 5b a7 60 5f 3d 29 b6 37 c8 11 be b2 87 a6 ab 4c 43 46 3d 9f 1c 04 a1 5b 18 69 b2 88 2f 9d e7 d4 f4 c4 38 e3 fa 1b 9a dc 30 d3 0f 47 d5 ea 6d cd 6e 04 84 ec 0a 82 d3 e4 cd d9 cf 1c 52 ff 5e f7 23 ff cc d4 8e 7c f6 a0 53 0f 65 ca 3a 38 cc 2d c4 db de 10 9b 44 73 0b 33 8c d0 c6 2f ed 38 70 e8 c6 b0 be b3 3e bd c6 83 c2 e6 c8 b8 f6 51 01 7f 33 15 eb 8e 70 2c 76 0d b2 59 2f db 22 42 a0 11 a8 81 5a 8b 4e 68 7f bd c9 6c f5 da 1d 3a 92 2c 2c ac 8e 38 2f d1 6a a4 0f 38 fb 77 d7 57 09 6f 82 91 ef 69 89 5c 99 73 4a c3 93 7e f0 76 94 88 da 40 ae 96 31 45 ec 31 11 62 88 39 04 93 8a df 12 8c 16 4f a1 ad 4f 58 25 d6 fb 35 57 4c ef 9f ae 6f 1d 96 f2 b1 3b 0b 6f 76 7e
+TLS: tls_verify_cb - preverify_ok=1 err=19 (self signed certificate in certificate chain) ca_cert_verify=0 depth=1 buf='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority'
+CTRL-EVENT-EAP-PEER-CERT depth=1 subject='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority' hash=b3b912756c714d761f12387d7aff9eda2bda59d155a6640e84bf561b76ade3e9
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=1 buf='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority'
+CTRL-EVENT-EAP-PEER-CERT depth=1 subject='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority' hash=b3b912756c714d761f12387d7aff9eda2bda59d155a6640e84bf561b76ade3e9
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=1 buf='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority'
+CTRL-EVENT-EAP-PEER-CERT depth=1 subject='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority' hash=b3b912756c714d761f12387d7aff9eda2bda59d155a6640e84bf561b76ade3e9
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=0 buf='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org'
+CTRL-EVENT-EAP-PEER-CERT depth=0 subject='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org' hash=a546181bb231cbbc31a66058cae5731862e80caeef7925969e66e3e03dca9c27
+EAP: Status notification: remote certificate verification (param=success)
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=0 buf='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org'
+CTRL-EVENT-EAP-PEER-CERT depth=0 subject='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org' hash=a546181bb231cbbc31a66058cae5731862e80caeef7925969e66e3e03dca9c27
+EAP: Status notification: remote certificate verification (param=success)
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server certificate A
+OpenSSL: RX ver=0x303 content_type=22 (handshake/server key exchange)
+OpenSSL: Message - hexdump(len=333): 0c 00 01 49 03 00 17 41 04 6c 1c cb 6f 57 44 14 7a 19 18 38 e7 d5 1b 90 80 40 80 4c a1 83 00 4e 0c 8c 6f 36 4e 82 0a 61 55 b4 43 e8 02 12 07 bf ae 8f bf fe 32 78 a5 9e 44 e6 56 15 86 d6 eb dc 58 62 12 d1 0e 5d 13 27 34 06 01 01 00 95 8c 88 9b 03 33 a8 24 3e aa 10 86 3e 28 68 75 97 ef ae 95 3f 57 e4 de 15 f1 2a fd f6 4c 2f d3 24 2b 64 39 f4 9a 52 3f 8f be 5b 8c e7 bf e4 c0 25 e8 64 6c d4 c0 db 92 8c 16 70 5d 65 58 3d fa ed c1 8a 9f a6 1d 45 8d ad 12 38 fb b5 08 76 d8 d3 df 93 4a aa 43 cf 86 82 28 94 d8 e2 8c 05 16 9d 83 95 03 dc 95 5a c9 34 59 cd f4 6d 98 f7 a5 78 31 2e e9 d3 34 f1 58 33 f4 67 34 f1 cb 08 cf a7 26 57 e4 ba 88 7b d8 2d da e5 a1 97 1b 81 90 ba 2c 57 5d 41 20 6a 46 5d 65 dd b3 cc 3c 5f df b8 d9 1d 1b 9f 98 b2 50 4b c4 df 41 33 58 79 d1 0f 79 27 72 1d ec d3 96 e3 0e 3f 3c a2 6f f3 8d 42 b4 f0 88 c5 1e 8e 30 59 be ce 3a 7d c4 0c 82 5b 3d f1 bb a4 8e ea 24 84 a6 04 c6 16 ba 39 13 2e 1f 34 fe a0 e4 8f 1d 17 8f c9 b9 71 cc ea 93 6f 08 87 b9 16 2b 0a 2b 34 e8 6d d6 47 75 b5 c3
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server key exchange A
+OpenSSL: RX ver=0x303 content_type=22 (handshake/server hello done)
+OpenSSL: Message - hexdump(len=4): 0e 00 00 00
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server done A
+OpenSSL: TX ver=0x303 content_type=22 (handshake/client key exchange)
+OpenSSL: Message - hexdump(len=70): 10 00 00 42 41 04 76 b5 68 ba 75 21 08 23 1d 7d f8 9b 7a c2 87 8d 01 38 4e 97 d5 34 01 45 99 e7 6b 70 3d 6f 33 e5 69 79 79 f9 2f a6 29 a4 4e 19 36 2b cc 25 5c 87 16 54 b2 49 70 87 26 5c 2e f2 58 c6 da 9c ad f0
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 write client key exchange A
+OpenSSL: TX ver=0x303 content_type=20 (change cipher spec/)
+OpenSSL: Message - hexdump(len=1): 01
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 write change cipher spec A
+OpenSSL: TX ver=0x303 content_type=22 (handshake/finished)
+OpenSSL: Message - hexdump(len=16): 14 00 00 0c d4 96 c0 25 66 92 cb 7d ab 72 b9 7f
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 write finished A
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 flush data
+SSL: (where=0x1002 ret=0xffffffff)
+SSL: SSL_connect:error in SSLv3 read finished A
+SSL: (where=0x1002 ret=0xffffffff)
+SSL: SSL_connect:error in SSLv3 read finished A
+SSL: SSL_connect - want more data
+SSL: 126 bytes pending from ssl_out
+SSL: 126 bytes left to be sent out (of total 126 bytes)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b87870
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=136)
+TX EAP -> RADIUS - hexdump(len=136): 02 05 00 88 19 80 00 00 00 7e 16 03 03 00 46 10 00 00 42 41 04 76 b5 68 ba 75 21 08 23 1d 7d f8 9b 7a c2 87 8d 01 38 4e 97 d5 34 01 45 99 e7 6b 70 3d 6f 33 e5 69 79 79 f9 2f a6 29 a4 4e 19 36 2b cc 25 5c 87 16 54 b2 49 70 87 26 5c 2e f2 58 c6 da 9c ad f0 14 03 03 00 01 01 16 03 03 00 28 32 d8 11 d6 46 d0 d9 2d 41 2f c2 d7 cf f9 b9 86 4e 6e 23 f8 84 e1 5a f2 74 53 4d a6 72 73 0c 23 c3 f5 c5 38 a0 8f 2c 11
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=5 length=287
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=138
+      Value: 0205008819800000007e160303004610000042410476b568ba752108231d7df89b7ac2878d01384e97d534014599e76b703d6f33e5697979f92fa629a44e19362bcc255c871654b2497087265c2ef258c6da9cadf0140303000101160303002832d811d646d0d92d412fc2d7cff9b9864e6e23f884e15af274534da672730c23c3f5c538a08f2c11
+   Attribute 24 (State) length=18
+      Value: e810f7e5ec15eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: aae90fff70df5fb554e398af71ce9950
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 115 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=5 length=115
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 085e1497950389c8a93722ed43ebbeb7
+   Attribute 79 (EAP-Message) length=59
+      Value: 0106003919001403030001011603030028ea185a9e541e7c3a0845bf01cdd1d92b42da7dcb5b02d8ccad9fda2027a458d2385c1b97fd6274b4
+   Attribute 24 (State) length=18
+      Value: e810f7e5ed16eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.86 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=6 len=57) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=6 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=57) - Flags 0x00
+OpenSSL: RX ver=0x303 content_type=20 (change cipher spec/)
+OpenSSL: Message - hexdump(len=1): 01
+OpenSSL: RX ver=0x303 content_type=22 (handshake/finished)
+OpenSSL: Message - hexdump(len=16): 14 00 00 0c d3 3a 1f 6c 23 f7 92 a3 a3 d2 32 4b
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read finished A
+SSL: (where=0x20 ret=0x1)
+SSL: (where=0x1002 ret=0x1)
+SSL: 0 bytes pending from ssl_out
+OpenSSL: Handshake finished - resumed=0
+SSL: No Application Data included
+SSL: No data to be sent out
+EAP-PEAP: TLS done, proceed to Phase 2
+EAP-PEAP: using label 'client EAP encryption' in key derivation
+EAP-PEAP: Derived key - hexdump(len=64): ad 8b 92 52 f8 47 28 60 2e 7a d3 95 5d 4f ba 08 7f e4 ee 66 54 54 bf 7b 15 e9 00 13 76 cc 7e 64 3d a6 3e aa 8f 70 b4 eb 8b 19 a9 4a c8 ae c1 40 f3 50 4d 17 bd 60 29 76 d2 9f 9e 09 ec 1e 06 f8
+EAP-PEAP: Derived Session-Id - hexdump(len=65): 19 67 c4 5e 87 e1 fa d8 3c dc f4 0c 88 0c 2b fe 73 b1 39 96 bf 8e 95 8c d4 8a 18 c4 03 07 dc 0b e9 5d 2f 4d 88 5a ec 25 fa 3c 8d 37 59 c2 95 bd 67 7b 9a cc f9 ae c7 9c 47 40 9a 5d 35 19 aa 95 d4
+SSL: Building ACK (type=25 id=6 ver=0)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b6ad10
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 06 00 06 19 00
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=6 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020600061900
+   Attribute 24 (State) length=18
+      Value: e810f7e5ed16eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 0412a098efe3e893336314c149295940
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 98 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=6 length=98
+   Attribute 80 (Message-Authenticator) length=18
+      Value: cf3f1645c3ddb8a48567624712e90dfd
+   Attribute 79 (EAP-Message) length=42
+      Value: 010700281900170303001dea185a9e541e7c3b094f76208fb0ce5811d38f526ca0a2ac73a4b9cbdf
+   Attribute 24 (State) length=18
+      Value: e810f7e5ee17eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.83 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=7 len=40) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=7 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=40) - Flags 0x00
+EAP-PEAP: received 34 bytes encrypted data for Phase 2
+EAP-PEAP: Decrypted Phase 2 EAP - hexdump(len=5): 01 07 00 05 01
+EAP-PEAP: received Phase 2: code=1 identifier=7 length=5
+EAP-PEAP: Phase 2 Request: type=1
+EAP: using real identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+EAP-PEAP: Encrypting Phase 2 data - hexdump(len=29): 02 07 00 1d 01 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77
+SSL: 54 bytes left to be sent out (of total 54 bytes)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b6de70
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=60)
+TX EAP -> RADIUS - hexdump(len=60): 02 07 00 3c 19 00 17 03 03 00 31 32 d8 11 d6 46 d0 d9 2e f9 10 01 ce 70 9a 36 f5 33 4f 90 9e fe 59 3e 19 ee 05 b2 d0 b1 6a 8a 22 bc 0b 06 a2 b3 a0 50 90 a2 d5 c1 1e 16 8b e4 3f 0c
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=7 length=211
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=62
+      Value: 0207003c1900170303003132d811d646d0d92ef91001ce709a36f5334f909efe593e19ee05b2d0b16a8a22bc0b06a2b3a05090a2d5c11e168be43f0c
+   Attribute 24 (State) length=18
+      Value: e810f7e5ee17eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: a061d6e32d00b1483dcd056980af78ef
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 132 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=7 length=132
+   Attribute 80 (Message-Authenticator) length=18
+      Value: a6b6d38975637259536a47b4bb1dc56c
+   Attribute 79 (EAP-Message) length=76
+      Value: 0108004a1900170303003fea185a9e541e7c3c66d01efeccd09f4def5dded2064470deeaa36896594cc7826ef62db873344d16315ee76e43628a350aeda4e311bf36f374bfd776f70bc1
+   Attribute 24 (State) length=18
+      Value: e810f7e5ef18eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.86 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=8 len=74) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=8 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=74) - Flags 0x00
+EAP-PEAP: received 68 bytes encrypted data for Phase 2
+EAP-PEAP: Decrypted Phase 2 EAP - hexdump(len=39): 1a 01 08 00 26 10 d1 97 38 1b 30 9d bb 81 a6 d4 b1 1d fa cd cc 01 66 72 65 65 72 61 64 69 75 73 2d 33 2e 30 2e 31 33
+EAP-PEAP: received Phase 2: code=1 identifier=8 length=43
+EAP-PEAP: Phase 2 Request: type=26
+EAP-PEAP: Selected Phase 2 EAP vendor 0 method 26
+EAP-MSCHAPV2: RX identifier 8 mschapv2_id 8
+EAP-MSCHAPV2: Received challenge
+EAP-MSCHAPV2: Authentication Servername - hexdump_ascii(len=17):
+     66 72 65 65 72 61 64 69 75 73 2d 33 2e 30 2e 31   freeradius-3.0.1
+     33                                                3               
+EAP-MSCHAPV2: Generating Challenge Response
+Get randomness: len=16 entropy=0
+random from os_get_random - hexdump(len=16): 6a 4d d8 1d bb 53 5f d4 72 aa 03 4a 59 1c 34 b4
+random_mix_pool - hexdump(len=20): 0d b9 b1 bf 70 7c bd fa 8b 8c 0a 46 d8 96 87 a4 8e 89 0d 7d
+random from internal pool - hexdump(len=16): 52 c7 66 0a bf 85 ed d3 d8 c1 5b 8c 5d 36 f0 8e
+mixed random - hexdump(len=16): 38 8a be 17 04 d6 b2 07 aa 6b 58 c6 04 2a c4 3a
+MSCHAPV2: Identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+MSCHAPV2: Username - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+MSCHAPV2: auth_challenge - hexdump(len=16): d1 97 38 1b 30 9d bb 81 a6 d4 b1 1d fa cd cc 01
+MSCHAPV2: peer_challenge - hexdump(len=16): 38 8a be 17 04 d6 b2 07 aa 6b 58 c6 04 2a c4 3a
+MSCHAPV2: username - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+MSCHAPV2: password - hexdump_ascii(len=9):
+     61 6e 6f 6e 79 6d 6f 75 73                        anonymous       
+MSCHAPV2: NT Response - hexdump(len=24): 25 c6 70 81 17 2f b7 e7 a7 2f 4a 15 fa 5e 98 fc 38 4d 44 21 bb fb 59 54
+MSCHAPV2: Auth Response - hexdump(len=20): 63 85 1f d8 d8 84 58 4b 13 89 23 23 b7 f9 6d 2d eb 20 c6 6a
+MSCHAPV2: Master Key - hexdump(len=16): 97 3e c0 ba 5c d4 99 ca d9 be 19 9d ce 10 5d 6a
+EAP-MSCHAPV2: TX identifier 8 mschapv2_id 8 (response)
+EAP-PEAP: Encrypting Phase 2 data - hexdump(len=83): 02 08 00 53 1a 02 08 00 4e 31 38 8a be 17 04 d6 b2 07 aa 6b 58 c6 04 2a c4 3a 00 00 00 00 00 00 00 00 25 c6 70 81 17 2f b7 e7 a7 2f 4a 15 fa 5e 98 fc 38 4d 44 21 bb fb 59 54 00 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77
+SSL: 108 bytes left to be sent out (of total 108 bytes)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x1b873d0
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=114)
+TX EAP -> RADIUS - hexdump(len=114): 02 08 00 72 19 00 17 03 03 00 67 32 d8 11 d6 46 d0 d9 2f ec 2a e9 a7 48 f8 b4 25 97 c6 a4 09 0b d4 72 33 61 bb ba 10 a7 80 f7 16 40 5f 89 b5 fe 9b ad 3a 57 c7 d8 7b be af 1a b8 42 be 61 8a fd 95 ed df 81 e2 ed b1 d3 c3 bb 18 4e a4 8e c0 c5 f1 66 b9 dd a9 6b e8 88 83 97 26 ec d7 3a 64 87 bd 76 b8 ed bb f0 c2 2c 0b 85 3a b7 24 d8 0c e9 71 7a
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=8 length=265
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=116
+      Value: 020800721900170303006732d811d646d0d92fec2ae9a748f8b42597c6a4090bd4723361bbba10a780f716405f89b5fe9bad3a57c7d87bbeaf1ab842be618afd95eddf81e2edb1d3c3bb184ea48ec0c5f166b9dda96be888839726ecd73a6487bd76b8edbbf0c22c0b853ab724d80ce9717a
+   Attribute 24 (State) length=18
+      Value: e810f7e5ef18eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 5937d93243339081faecf009c32c7252
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 104 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=8 length=104
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 8e03cbe6ae0de668c8207716f4b6383e
+   Attribute 79 (EAP-Message) length=48
+      Value: 0109002e19001703030023ea185a9e541e7c3da5672380e02be24f80f38065c288fcc01bef5a217ce70b7fb69620
+   Attribute 24 (State) length=18
+      Value: e810f7e5e019eea4eb82d4bb070619d8
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.97 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=9 len=46) from RADIUS server: EAP-Request-PEAP (25)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=9 method=25 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=46) - Flags 0x00
+EAP-PEAP: received 40 bytes encrypted data for Phase 2
+EAP-PEAP: Decrypted Phase 2 EAP - hexdump(len=11): 01 09 00 0b 21 80 03 00 02 00 02
+EAP-PEAP: received Phase 2: code=1 identifier=9 length=11
+EAP-PEAP: Phase 2 Request: type=33
+EAP-TLV: Received TLVs - hexdump(len=6): 80 03 00 02 00 02
+EAP-TLV: Result TLV - hexdump(len=2): 00 02
+EAP-TLV: TLV Result - Failure
+EAP-PEAP: Encrypting Phase 2 data - hexdump(len=11): 02 09 00 0b 21 80 03 00 02 00 02
+SSL: 40 bytes left to be sent out (of total 40 bytes)
+EAP: method process -> ignore=FALSE methodState=DONE decision=FAIL eapRespData=0x1b6a7c0
+EAP: Session-Id - hexdump(len=65): 19 67 c4 5e 87 e1 fa d8 3c dc f4 0c 88 0c 2b fe 73 b1 39 96 bf 8e 95 8c d4 8a 18 c4 03 07 dc 0b e9 5d 2f 4d 88 5a ec 25 fa 3c 8d 37 59 c2 95 bd 67 7b 9a cc f9 ae c7 9c 47 40 9a 5d 35 19 aa 95 d4
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=46)
+TX EAP -> RADIUS - hexdump(len=46): 02 09 00 2e 19 00 17 03 03 00 23 32 d8 11 d6 46 d0 d9 30 ae 1c 65 68 55 31 80 7f c0 fb 4a 45 0e 40 d9 df b1 dd f1 03 26 92 c2 81 3c 8d c7
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=9 length=197
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=48
+      Value: 0209002e1900170303002332d811d646d0d930ae1c65685531807fc0fb4a450e40d9dfb1ddf1032692c2813c8dc7
+   Attribute 24 (State) length=18
+      Value: e810f7e5e019eea4eb82d4bb070619d8
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 10cd71c8b4d8133dd65b994bcc65e540
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+STA 02:00:00:00:00:01: Resending RADIUS message (id=9)
+
+Next RADIUS client retransmit in 6 seconds
+Received 44 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=3 (Access-Reject) identifier=9 length=44
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 1393e73ead77c80c68e4b43aa88f691c
+   Attribute 79 (EAP-Message) length=6
+      Value: 04090004
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.83 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=4 id=9 len=4) from RADIUS server: EAP Failure
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Failure
+EAP: Status notification: completion (param=failure)
+EAP: EAP entering state FAILURE
+CTRL-EVENT-EAP-FAILURE EAP authentication failed
+EAPOL: SUPP_PAE entering state HELD
+EAPOL: SUPP_BE entering state RECEIVE
+EAPOL: SUPP_BE entering state FAIL
+EAPOL: SUPP_BE entering state IDLE
+eapol_sm_cb: result=0
+EAPOL: EAP key not available
+EAPOL: EAP Session-Id not available
+WPA: Clear old PMK and PTK
+EAP: deinitialize previously used EAP method (25, PEAP) at EAP deinit
+ENGINE: engine deinit
+MPPE keys OK: 0  mismatch: 1
+FAILURE
+</pre>
+<a id=pap><h2>开始测试 EAP-TLS PAP ...</h2></a><h3>使用的配置文件</h3><pre>
+network={
+    ssid="eduroam"
+    key_mgmt=WPA-EAP
+    eap=TTLS
+    identity="anonymous@takming.edu.tw"
+    anonymous_identity="anonymous@takming.edu.tw"
+    password="anonymous"
+    phase2="auth=PAP"
+}</pre>
+<script language="JavaScript">document.getElementById("pap").innerHTML = "<span style=\"color: red;\">FAILURE，认证失败</span>"</script><h3>测试结果: <span style="color: red;">FAILURE，认证失败</span></h3><pre>
+Reading configuration file '/dev/shm/radcfg.2493.conf'
+Line: 1 - start of a new network block
+ssid - hexdump_ascii(len=7):
+     65 64 75 72 6f 61 6d                              eduroam         
+key_mgmt: 0x1
+eap methods - hexdump(len=16): 00 00 00 00 15 00 00 00 00 00 00 00 00 00 00 00
+identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+anonymous_identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+password - hexdump_ascii(len=9):
+     61 6e 6f 6e 79 6d 6f 75 73                        anonymous       
+phase2 - hexdump_ascii(len=8):
+     61 75 74 68 3d 50 41 50                           auth=PAP        
+Priority group 0
+   id=0 ssid='eduroam'
+Authentication server 127.0.0.1:1812
+RADIUS local address: 127.0.0.1:41353
+ENGINE: Loading dynamic engine
+ENGINE: Loading dynamic engine
+EAPOL: SUPP_PAE entering state DISCONNECTED
+EAPOL: KEY_RX entering state NO_KEY_RECEIVE
+EAPOL: SUPP_BE entering state INITIALIZE
+EAP: EAP entering state DISABLED
+EAPOL: External notification - portValid=0
+EAPOL: External notification - portEnabled=1
+EAPOL: SUPP_PAE entering state CONNECTING
+EAPOL: SUPP_BE entering state IDLE
+EAP: EAP entering state INITIALIZE
+EAP: EAP entering state IDLE
+Sending fake EAP-Request-Identity
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_PAE entering state RESTART
+EAP: EAP entering state INITIALIZE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_PAE entering state AUTHENTICATING
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=0 method=1 vendor=0 vendorMethod=0
+EAP: EAP entering state IDENTITY
+CTRL-EVENT-EAP-STARTED EAP authentication started
+EAP: Status notification: started (param=)
+EAP: EAP-Request Identity data - hexdump_ascii(len=0):
+EAP: using anonymous identity - hexdump_ascii(len=24):
+     61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e   anonymous@takmin
+     67 2e 65 64 75 2e 74 77                           g.edu.tw        
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=29)
+TX EAP -> RADIUS - hexdump(len=29): 02 00 00 1d 01 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77
+Encapsulating EAP message into a RADIUS packet
+Learned identity from EAP-Response-Identity - hexdump(len=24): 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=0 length=162
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=31
+      Value: 0200001d01616e6f6e796d6f75734074616b6d696e672e6564752e7477
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 3d985fb3ca7e570376659fd17202e53b
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 80 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=0 length=80
+   Attribute 80 (Message-Authenticator) length=18
+      Value: bcb4d6b748777f7e9b2ff1daae62cbca
+   Attribute 79 (EAP-Message) length=24
+      Value: 0101001604103092bca18172453d2df92614d5ec2dac
+   Attribute 24 (State) length=18
+      Value: d253ec83d252e803075e61967c05b60e
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.83 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=1 len=22) from RADIUS server: EAP-Request-MD5 (4)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=1 method=4 vendor=0 vendorMethod=0
+EAP: EAP entering state GET_METHOD
+EAP: configuration does not allow: vendor 0 method 4
+EAP: vendor 0 method 4 not allowed
+CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=4 -> NAK
+EAP: Status notification: refuse proposed method (param=MD5)
+EAP: Building EAP-Nak (requested type 4 vendor=0 method=0 not allowed)
+EAP: allowed methods - hexdump(len=1): 15
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 01 00 06 03 15
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=1 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020100060315
+   Attribute 24 (State) length=18
+      Value: d253ec83d252e803075e61967c05b60e
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 477a273da23274ad1425db3470d84b76
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 64 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=1 length=64
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 6490af5ac8fd06f2406a1b8fe5cf3d36
+   Attribute 79 (EAP-Message) length=8
+      Value: 010200061520
+   Attribute 24 (State) length=18
+      Value: d253ec83d351f903075e61967c05b60e
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.84 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=2 len=6) from RADIUS server: EAP-Request-TTLS (21)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=2 method=21 vendor=0 vendorMethod=0
+EAP: EAP entering state GET_METHOD
+CTRL-EVENT-EAP-PROPOSED-METHOD vendor=0 method=21
+EAP: Status notification: accept proposed method (param=TTLS)
+EAP: Initialize selected EAP method: vendor 0 method 21 (TTLS)
+EAP-TTLS: Phase2 type: PAP
+TLS: using phase1 config options
+CTRL-EVENT-EAP-METHOD EAP vendor 0 method 21 (TTLS) selected
+EAP: EAP entering state METHOD
+SSL: Received packet(len=6) - Flags 0x20
+EAP-TTLS: Start (server ver=0, own ver=0)
+SSL: (where=0x10 ret=0x1)
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:before/connect initialization
+OpenSSL: TX ver=0x303 content_type=22 (handshake/client hello)
+OpenSSL: Message - hexdump(len=238): 01 00 00 ea 03 03 67 c4 5e 93 88 4b 09 a3 98 b2 f5 3a e7 95 84 1e a1 d2 ec 6f 10 c9 d4 f3 08 c8 b0 17 cf 68 ab bb 00 00 84 c0 30 c0 2c c0 28 c0 24 c0 14 c0 0a 00 a3 00 9f 00 6b 00 6a 00 39 00 38 00 88 00 87 c0 32 c0 2e c0 2a c0 26 c0 0f c0 05 00 9d 00 3d 00 35 00 84 c0 2f c0 2b c0 27 c0 23 c0 13 c0 09 00 a2 00 9e 00 67 00 40 00 33 00 32 00 9a 00 99 00 45 00 44 c0 31 c0 2d c0 29 c0 25 c0 0e c0 04 00 9c 00 3c 00 2f 00 96 00 41 c0 12 c0 08 00 16 00 13 c0 0d c0 03 00 0a 00 07 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 ff 01 00 00 3d 00 0b 00 04 03 00 01 02 00 0a 00 08 00 06 00 19 00 18 00 17 00 0d 00 20 00 1e 06 01 06 02 06 03 05 01 05 02 05 03 04 01 04 02 04 03 03 01 03 02 03 03 02 01 02 02 02 03 00 0f 00 01 01
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv2/v3 write client hello A
+SSL: (where=0x1002 ret=0xffffffff)
+SSL: SSL_connect:error in SSLv2/v3 read server hello A
+SSL: SSL_connect - want more data
+SSL: 243 bytes pending from ssl_out
+SSL: 243 bytes left to be sent out (of total 243 bytes)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x24a6470
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=249)
+TX EAP -> RADIUS - hexdump(len=249): 02 02 00 f9 15 00 16 03 01 00 ee 01 00 00 ea 03 03 67 c4 5e 93 88 4b 09 a3 98 b2 f5 3a e7 95 84 1e a1 d2 ec 6f 10 c9 d4 f3 08 c8 b0 17 cf 68 ab bb 00 00 84 c0 30 c0 2c c0 28 c0 24 c0 14 c0 0a 00 a3 00 9f 00 6b 00 6a 00 39 00 38 00 88 00 87 c0 32 c0 2e c0 2a c0 26 c0 0f c0 05 00 9d 00 3d 00 35 00 84 c0 2f c0 2b c0 27 c0 23 c0 13 c0 09 00 a2 00 9e 00 67 00 40 00 33 00 32 00 9a 00 99 00 45 00 44 c0 31 c0 2d c0 29 c0 25 c0 0e c0 04 00 9c 00 3c 00 2f 00 96 00 41 c0 12 c0 08 00 16 00 13 c0 0d c0 03 00 0a 00 07 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 ff 01 00 00 3d 00 0b 00 04 03 00 01 02 00 0a 00 08 00 06 00 19 00 18 00 17 00 0d 00 20 00 1e 06 01 06 02 06 03 05 01 05 02 05 03 04 01 04 02 04 03 03 01 03 02 03 03 02 01 02 02 02 03 00 0f 00 01 01
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=2 length=400
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=251
+      Value: 020200f9150016030100ee010000ea030367c45e93884b09a398b2f53ae795841ea1d2ec6f10c9d4f308c8b017cf68abbb000084c030c02cc028c024c014c00a00a3009f006b006a0039003800880087c032c02ec02ac026c00fc005009d003d00350084c02fc02bc027c023c013c00900a2009e0067004000330032009a009900450044c031c02dc029c025c00ec004009c003c002f00960041c012c00800160013c00dc003000a0007c011c007c00cc0020005000400ff0100003d000b000403000102000a00080006001900180017000d0020001e060106020603050105020503040104020403030103020303020102020203000f000101
+   Attribute 24 (State) length=18
+      Value: d253ec83d351f903075e61967c05b60e
+   Attribute 80 (Message-Authenticator) length=18
+      Value: e50ce85f7ed81f8f83fd02321eb39f46
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+EAPOL: startWhen --> 0
+Received 1068 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=2 length=1068
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 9e52a3c72eebc7f2421d9015d86ee48f
+   Attribute 79 (EAP-Message) length=255
+      Value: 010303ec15c000000a76160303003e0200003a030328da854236264385dbaa82ea3bd2e26d6d506217f94e96189e2e7f5d1633a88800c030000012ff01000100000b000403000102000f00010116030308d30b0008cf0008cc0003de308203da308202c2a003020102020101300d06092a864886f70d01010b0500308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c652043
+   Attribute 79 (EAP-Message) length=255
+      Value: 6572746966696361746520417574686f72697479301e170d3231303930313030353834375a170d3231313033313030353834375a307c310b3009060355040613024652310f300d06035504080c0652616469757331153013060355040a0c0c4578616d706c6520496e632e3123302106035504030c1a4578616d706c65205365727665722043657274696669636174653120301e06092a864886f70d010901161161646d696e406578616d706c652e6f726730820122300d06092a864886f70d01010105000382010f003082010a02820101009e79c8f55b47bdd736757d096b7ef800bcc209a09238fa6a99df0f1e0f011a9b753264e58959eb85b10f
+   Attribute 79 (EAP-Message) length=255
+      Value: 587fe672d8cc3556e967539dbc776d832a0867844b78db78be4229103166ba50872faa7c90e80a1ed23e5e4997ee191b95103af0fe6b0fa85197856633bf84193e36cde0f2676f3f215e7fa2de32694b6d2d27e0283f174559428e2cba112caf48cd397caec7e94788d2791f8ae8e5b3716044350b7bbd863a2be323259ef1cdab1242cb1779b6799bd28ef3cff733ebd82fef9f78228c5bbfb3d5f112cd1611a531b626d6993d1cfc0e99a367e4078228d8f3550ab53b404d389c53e7c6abf749b3cbdf27939a176c4711e2cbc5fa0e456c0663d2b30203010001a34f304d30130603551d25040c300a06082b0601050507030130360603551d1f042f
+   Attribute 79 (EAP-Message) length=247
+      Value: 302d302ba029a0278625687474703a2f2f7777772e6578616d706c652e636f6d2f6578616d706c655f63612e63726c300d06092a864886f70d01010b0500038201010066483a95cbd766bf1a8315adba9e0d4b9f4837f7561f7210c859367393a0136d3b58f37d79dc2273299a7792c2cef378d4d5decb4b43ca266789b0e53fb6a805bbb3680ac851c501e1f4fcedf91b2567263587e67946465533d8f26918c189c5eb2629c2c87b146942b1da60a6d5458367cc5d83a37fb2df6cc81247e46aabd4eb436072ed1dd0afcfd348698318448770248d7debb95897e131770078c7146039cd8d9b56cf34eae4ed24a992e26a0b732e
+   Attribute 24 (State) length=18
+      Value: d253ec83d050f903075e61967c05b60e
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.84 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=3 len=1004) from RADIUS server: EAP-Request-TTLS (21)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=3 method=21 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=1004) - Flags 0xc0
+SSL: TLS Message Length: 2678
+SSL: Need 1684 bytes more input data
+SSL: Building ACK (type=21 id=3 ver=0)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x2494760
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 03 00 06 15 00
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=3 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020300061500
+   Attribute 24 (State) length=18
+      Value: d253ec83d050f903075e61967c05b60e
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 6851a96627c0cf481a0a07bda4d1780e
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 1068 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=3 length=1068
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 40602fd40066b32146115cf3325bbe04
+   Attribute 79 (EAP-Message) length=255
+      Value: 010403ec15c000000a761e040785e5ccc120ab35583e3fd6dfb916d91bc7c7e85b5b07714de69cb97bc0f33ff60642291fd324d6ff4572ec1b2cc10c093987abeff1b7e4119f4ba2cbbd09c08ec20a7f9bc711f12b3ebd090004e8308204e4308203cca003020102020900f10ea396435f9dfa300d06092a864886f70d01010b0500308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578
+   Attribute 79 (EAP-Message) length=255
+      Value: 616d706c6520436572746966696361746520417574686f72697479301e170d3231303930313030353834375a170d3231313033313030353834375a308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c6520436572746966696361746520417574686f7269747930820122300d06092a864886f70d01010105000382010f003082010a0282010100d9cdba5f425c5ed64cf056
+   Attribute 79 (EAP-Message) length=255
+      Value: e0cd110df3f67fd8642bed7db11c853d4026d004e29a5997586204d80516d6d48b474c71ac3fd6687e051d466b15d83a6984be7c7507c3a2f9c49d7b75106532edffc4ee38b3cc18e78eaa43bba1d47f2931ff6cee0e5e45a9efce25bede84ee4d6f490f5a56325a270d740a4e8e1c3bf06d190f1f4fd33d2e1cbbbacb98fbc9ab8ae392797bf68c5073e6ad89ca665ba4a5c940f48e481fbde5c6936560d4bf7b3a776856f23b55545428ac27d10e039432d171c7de3ae2ea3ae974b8ffb18b216743c9806b842ba6a00de59757b2dbf7811b24029d26bc857aca20f1ae9baf2de2ca2eea4646be9df31469654c70630eceee37390203010001a38201
+   Attribute 79 (EAP-Message) length=247
+      Value: 3730820133301d0603551d0e04160414ca5f9c3979eab8180ca9b2821cb1330eca48b5763081c80603551d230481c03081bd8014ca5f9c3979eab8180ca9b2821cb1330eca48b576a18199a48196308193310b3009060355040613024652310f300d06035504080c065261646975733112301006035504070c09536f6d65776865726531153013060355040a0c0c4578616d706c6520496e632e3120301e06092a864886f70d010901161161646d696e406578616d706c652e6f72673126302406035504030c1d4578616d706c6520436572746966696361746520417574686f72697479820900f10ea396435f9dfa300f0603551d
+   Attribute 24 (State) length=18
+      Value: d253ec83d157f903075e61967c05b60e
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.84 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=4 len=1004) from RADIUS server: EAP-Request-TTLS (21)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=4 method=21 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=1004) - Flags 0xc0
+SSL: TLS Message Length: 2678
+SSL: Need 690 bytes more input data
+SSL: Building ACK (type=21 id=4 ver=0)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x2494760
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=6)
+TX EAP -> RADIUS - hexdump(len=6): 02 04 00 06 15 00
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=4 length=157
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=8
+      Value: 020400061500
+   Attribute 24 (State) length=18
+      Value: d253ec83d157f903075e61967c05b60e
+   Attribute 80 (Message-Authenticator) length=18
+      Value: cee746622f18ec2815859ec676d622fd
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 762 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=4 length=762
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 1ad1e7889a551d8a68d6dc5d747d6638
+   Attribute 79 (EAP-Message) length=255
+      Value: 010502bc158000000a76130101ff040530030101ff30360603551d1f042f302d302ba029a0278625687474703a2f2f7777772e6578616d706c652e6f72672f6578616d706c655f63612e63726c300d06092a864886f70d01010b050003820101000ca3d319731a68174b6279528021ab9676a07717a27c1de8059c683d237093573cd1ca4c5ba7605f3d29b637c811beb287a6ab4c43463d9f1c04a15b1869b2882f9de7d4f4c438e3fa1b9adc30d30f47d5ea6dcd6e0484ec0a82d3e4cdd9cf1c52ff5ef723ffccd48e7cf6a0530f65ca3a38cc2dc4dbde109b44730b338cd0c62fed3870e8c6b0beb33ebdc683c2e6c8b8f651017f3315eb8e702c76
+   Attribute 79 (EAP-Message) length=255
+      Value: 0db2592fdb2242a011a8815a8b4e687fbdc96cf5da1d3a922c2cac8e382fd16aa40f38fb77d757096f8291ef69895c99734ac3937ef0769488da40ae963145ec311162883904938adf128c164fa1ad4f5825d6fb35574cef9fae6f1d96f2b13b0b6f767e160303014d0c000149030017410464de8e877a98241d3cf3d621dd0c820cb6d2a3a6cb70712ae4d3c464392cbf1cad1efc572bd96e0733113b808c3c0212c2c93c2f0d5a5432c7ae7020782a465f060101000df3f67549582e4ee4e1cbf14a1e74492be92f7304d47e27f44c3451651d8ce1106049f9bd9fe095ee234f6aec9864e4653fe4538f1278ff7f0e6489e01a797e9901587bcf82cd
+   Attribute 79 (EAP-Message) length=196
+      Value: 9727b8940fc22a98e1d93d1a02bb6ecb5a3d80f528a7ba91e6549b10abe0f93b5efcdd3418dd835df4cb981a266f0a4f9367fb46027d6ee200ca4a730c9c85260b74e1a2e4cf9efa70fb1dea8de0f31a38b2a11de6dd28b38949994afbc72c995b085a170af5e43f692886e94235866123c9498b91f08cc6eb408775d57ad362848bcf729c290cbaf71cfa2da8fedf2c835f6659ae0717fcf9636508274234228e4f19afd43be796d2ae321b94c079ec9bcb201e2ce6fe681116030300040e000000
+   Attribute 24 (State) length=18
+      Value: d253ec83d656f903075e61967c05b60e
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.86 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=5 len=700) from RADIUS server: EAP-Request-TTLS (21)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=5 method=21 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=700) - Flags 0x80
+SSL: TLS Message Length: 2678
+OpenSSL: RX ver=0x303 content_type=22 (handshake/server hello)
+OpenSSL: Message - hexdump(len=62): 02 00 00 3a 03 03 28 da 85 42 36 26 43 85 db aa 82 ea 3b d2 e2 6d 6d 50 62 17 f9 4e 96 18 9e 2e 7f 5d 16 33 a8 88 00 c0 30 00 00 12 ff 01 00 01 00 00 0b 00 04 03 00 01 02 00 0f 00 01 01
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server hello A
+OpenSSL: RX ver=0x303 content_type=22 (handshake/certificate)
+OpenSSL: Message - hexdump(len=2259): 0b 00 08 cf 00 08 cc 00 03 de 30 82 03 da 30 82 02 c2 a0 03 02 01 02 02 01 01 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30 1e 17 0d 32 31 30 39 30 31 30 30 35 38 34 37 5a 17 0d 32 31 31 30 33 31 30 30 35 38 34 37 5a 30 7c 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 23 30 21 06 03 55 04 03 0c 1a 45 78 61 6d 70 6c 65 20 53 65 72 76 65 72 20 43 65 72 74 69 66 69 63 61 74 65 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 9e 79 c8 f5 5b 47 bd d7 36 75 7d 09 6b 7e f8 00 bc c2 09 a0 92 38 fa 6a 99 df 0f 1e 0f 01 1a 9b 75 32 64 e5 89 59 eb 85 b1 0f 58 7f e6 72 d8 cc 35 56 e9 67 53 9d bc 77 6d 83 2a 08 67 84 4b 78 db 78 be 42 29 10 31 66 ba 50 87 2f aa 7c 90 e8 0a 1e d2 3e 5e 49 97 ee 19 1b 95 10 3a f0 fe 6b 0f a8 51 97 85 66 33 bf 84 19 3e 36 cd e0 f2 67 6f 3f 21 5e 7f a2 de 32 69 4b 6d 2d 27 e0 28 3f 17 45 59 42 8e 2c ba 11 2c af 48 cd 39 7c ae c7 e9 47 88 d2 79 1f 8a e8 e5 b3 71 60 44 35 0b 7b bd 86 3a 2b e3 23 25 9e f1 cd ab 12 42 cb 17 79 b6 79 9b d2 8e f3 cf f7 33 eb d8 2f ef 9f 78 22 8c 5b bf b3 d5 f1 12 cd 16 11 a5 31 b6 26 d6 99 3d 1c fc 0e 99 a3 67 e4 07 82 28 d8 f3 55 0a b5 3b 40 4d 38 9c 53 e7 c6 ab f7 49 b3 cb df 27 93 9a 17 6c 47 11 e2 cb c5 fa 0e 45 6c 06 63 d2 b3 02 03 01 00 01 a3 4f 30 4d 30 13 06 03 55 1d 25 04 0c 30 0a 06 08 2b 06 01 05 05 07 03 01 30 36 06 03 55 1d 1f 04 2f 30 2d 30 2b a0 29 a0 27 86 25 68 74 74 70 3a 2f 2f 77 77 77 2e 65 78 61 6d 70 6c 65 2e 63 6f 6d 2f 65 78 61 6d 70 6c 65 5f 63 61 2e 63 72 6c 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 03 82 01 01 00 66 48 3a 95 cb d7 66 bf 1a 83 15 ad ba 9e 0d 4b 9f 48 37 f7 56 1f 72 10 c8 59 36 73 93 a0 13 6d 3b 58 f3 7d 79 dc 22 73 29 9a 77 92 c2 ce f3 78 d4 d5 de cb 4b 43 ca 26 67 89 b0 e5 3f b6 a8 05 bb b3 68 0a c8 51 c5 01 e1 f4 fc ed f9 1b 25 67 26 35 87 e6 79 46 46 55 33 d8 f2 69 18 c1 89 c5 eb 26 29 c2 c8 7b 14 69 42 b1 da 60 a6 d5 45 83 67 cc 5d 83 a3 7f b2 df 6c c8 12 47 e4 6a ab d4 eb 43 60 72 ed 1d d0 af cf d3 48 69 83 18 44 87 70 24 8d 7d eb b9 58 97 e1 31 77 00 78 c7 14 60 39 cd 8d 9b 56 cf 34 ea e4 ed 24 a9 92 e2 6a 0b 73 2e 1e 04 07 85 e5 cc c1 20 ab 35 58 3e 3f d6 df b9 16 d9 1b c7 c7 e8 5b 5b 07 71 4d e6 9c b9 7b c0 f3 3f f6 06 42 29 1f d3 24 d6 ff 45 72 ec 1b 2c c1 0c 09 39 87 ab ef f1 b7 e4 11 9f 4b a2 cb bd 09 c0 8e c2 0a 7f 9b c7 11 f1 2b 3e bd 09 00 04 e8 30 82 04 e4 30 82 03 cc a0 03 02 01 02 02 09 00 f1 0e a3 96 43 5f 9d fa 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30 1e 17 0d 32 31 30 39 30 31 30 30 35 38 34 37 5a 17 0d 32 31 31 30 33 31 30 30 35 38 34 37 5a 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 30 82 01 0a 02 82 01 01 00 d9 cd ba 5f 42 5c 5e d6 4c f0 56 e0 cd 11 0d f3 f6 7f d8 64 2b ed 7d b1 1c 85 3d 40 26 d0 04 e2 9a 59 97 58 62 04 d8 05 16 d6 d4 8b 47 4c 71 ac 3f d6 68 7e 05 1d 46 6b 15 d8 3a 69 84 be 7c 75 07 c3 a2 f9 c4 9d 7b 75 10 65 32 ed ff c4 ee 38 b3 cc 18 e7 8e aa 43 bb a1 d4 7f 29 31 ff 6c ee 0e 5e 45 a9 ef ce 25 be de 84 ee 4d 6f 49 0f 5a 56 32 5a 27 0d 74 0a 4e 8e 1c 3b f0 6d 19 0f 1f 4f d3 3d 2e 1c bb ba cb 98 fb c9 ab 8a e3 92 79 7b f6 8c 50 73 e6 ad 89 ca 66 5b a4 a5 c9 40 f4 8e 48 1f bd e5 c6 93 65 60 d4 bf 7b 3a 77 68 56 f2 3b 55 54 54 28 ac 27 d1 0e 03 94 32 d1 71 c7 de 3a e2 ea 3a e9 74 b8 ff b1 8b 21 67 43 c9 80 6b 84 2b a6 a0 0d e5 97 57 b2 db f7 81 1b 24 02 9d 26 bc 85 7a ca 20 f1 ae 9b af 2d e2 ca 2e ea 46 46 be 9d f3 14 69 65 4c 70 63 0e ce ee 37 39 02 03 01 00 01 a3 82 01 37 30 82 01 33 30 1d 06 03 55 1d 0e 04 16 04 14 ca 5f 9c 39 79 ea b8 18 0c a9 b2 82 1c b1 33 0e ca 48 b5 76 30 81 c8 06 03 55 1d 23 04 81 c0 30 81 bd 80 14 ca 5f 9c 39 79 ea b8 18 0c a9 b2 82 1c b1 33 0e ca 48 b5 76 a1 81 99 a4 81 96 30 81 93 31 0b 30 09 06 03 55 04 06 13 02 46 52 31 0f 30 0d 06 03 55 04 08 0c 06 52 61 64 69 75 73 31 12 30 10 06 03 55 04 07 0c 09 53 6f 6d 65 77 68 65 72 65 31 15 30 13 06 03 55 04 0a 0c 0c 45 78 61 6d 70 6c 65 20 49 6e 63 2e 31 20 30 1e 06 09 2a 86 48 86 f7 0d 01 09 01 16 11 61 64 6d 69 6e 40 65 78 61 6d 70 6c 65 2e 6f 72 67 31 26 30 24 06 03 55 04 03 0c 1d 45 78 61 6d 70 6c 65 20 43 65 72 74 69 66 69 63 61 74 65 20 41 75 74 68 6f 72 69 74 79 82 09 00 f1 0e a3 96 43 5f 9d fa 30 0f 06 03 55 1d 13 01 01 ff 04 05 30 03 01 01 ff 30 36 06 03 55 1d 1f 04 2f 30 2d 30 2b a0 29 a0 27 86 25 68 74 74 70 3a 2f 2f 77 77 77 2e 65 78 61 6d 70 6c 65 2e 6f 72 67 2f 65 78 61 6d 70 6c 65 5f 63 61 2e 63 72 6c 30 0d 06 09 2a 86 48 86 f7 0d 01 01 0b 05 00 03 82 01 01 00 0c a3 d3 19 73 1a 68 17 4b 62 79 52 80 21 ab 96 76 a0 77 17 a2 7c 1d e8 05 9c 68 3d 23 70 93 57 3c d1 ca 4c 5b a7 60 5f 3d 29 b6 37 c8 11 be b2 87 a6 ab 4c 43 46 3d 9f 1c 04 a1 5b 18 69 b2 88 2f 9d e7 d4 f4 c4 38 e3 fa 1b 9a dc 30 d3 0f 47 d5 ea 6d cd 6e 04 84 ec 0a 82 d3 e4 cd d9 cf 1c 52 ff 5e f7 23 ff cc d4 8e 7c f6 a0 53 0f 65 ca 3a 38 cc 2d c4 db de 10 9b 44 73 0b 33 8c d0 c6 2f ed 38 70 e8 c6 b0 be b3 3e bd c6 83 c2 e6 c8 b8 f6 51 01 7f 33 15 eb 8e 70 2c 76 0d b2 59 2f db 22 42 a0 11 a8 81 5a 8b 4e 68 7f bd c9 6c f5 da 1d 3a 92 2c 2c ac 8e 38 2f d1 6a a4 0f 38 fb 77 d7 57 09 6f 82 91 ef 69 89 5c 99 73 4a c3 93 7e f0 76 94 88 da 40 ae 96 31 45 ec 31 11 62 88 39 04 93 8a df 12 8c 16 4f a1 ad 4f 58 25 d6 fb 35 57 4c ef 9f ae 6f 1d 96 f2 b1 3b 0b 6f 76 7e
+TLS: tls_verify_cb - preverify_ok=1 err=19 (self signed certificate in certificate chain) ca_cert_verify=0 depth=1 buf='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority'
+CTRL-EVENT-EAP-PEER-CERT depth=1 subject='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority' hash=b3b912756c714d761f12387d7aff9eda2bda59d155a6640e84bf561b76ade3e9
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=1 buf='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority'
+CTRL-EVENT-EAP-PEER-CERT depth=1 subject='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority' hash=b3b912756c714d761f12387d7aff9eda2bda59d155a6640e84bf561b76ade3e9
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=1 buf='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority'
+CTRL-EVENT-EAP-PEER-CERT depth=1 subject='/C=FR/ST=Radius/L=Somewhere/O=Example Inc./emailAddress=admin@example.org/CN=Example Certificate Authority' hash=b3b912756c714d761f12387d7aff9eda2bda59d155a6640e84bf561b76ade3e9
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=0 buf='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org'
+CTRL-EVENT-EAP-PEER-CERT depth=0 subject='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org' hash=a546181bb231cbbc31a66058cae5731862e80caeef7925969e66e3e03dca9c27
+EAP: Status notification: remote certificate verification (param=success)
+TLS: tls_verify_cb - preverify_ok=1 err=10 (certificate has expired) ca_cert_verify=0 depth=0 buf='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org'
+CTRL-EVENT-EAP-PEER-CERT depth=0 subject='/C=FR/ST=Radius/O=Example Inc./CN=Example Server Certificate/emailAddress=admin@example.org' hash=a546181bb231cbbc31a66058cae5731862e80caeef7925969e66e3e03dca9c27
+EAP: Status notification: remote certificate verification (param=success)
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server certificate A
+OpenSSL: RX ver=0x303 content_type=22 (handshake/server key exchange)
+OpenSSL: Message - hexdump(len=333): 0c 00 01 49 03 00 17 41 04 64 de 8e 87 7a 98 24 1d 3c f3 d6 21 dd 0c 82 0c b6 d2 a3 a6 cb 70 71 2a e4 d3 c4 64 39 2c bf 1c ad 1e fc 57 2b d9 6e 07 33 11 3b 80 8c 3c 02 12 c2 c9 3c 2f 0d 5a 54 32 c7 ae 70 20 78 2a 46 5f 06 01 01 00 0d f3 f6 75 49 58 2e 4e e4 e1 cb f1 4a 1e 74 49 2b e9 2f 73 04 d4 7e 27 f4 4c 34 51 65 1d 8c e1 10 60 49 f9 bd 9f e0 95 ee 23 4f 6a ec 98 64 e4 65 3f e4 53 8f 12 78 ff 7f 0e 64 89 e0 1a 79 7e 99 01 58 7b cf 82 cd 97 27 b8 94 0f c2 2a 98 e1 d9 3d 1a 02 bb 6e cb 5a 3d 80 f5 28 a7 ba 91 e6 54 9b 10 ab e0 f9 3b 5e fc dd 34 18 dd 83 5d f4 cb 98 1a 26 6f 0a 4f 93 67 fb 46 02 7d 6e e2 00 ca 4a 73 0c 9c 85 26 0b 74 e1 a2 e4 cf 9e fa 70 fb 1d ea 8d e0 f3 1a 38 b2 a1 1d e6 dd 28 b3 89 49 99 4a fb c7 2c 99 5b 08 5a 17 0a f5 e4 3f 69 28 86 e9 42 35 86 61 23 c9 49 8b 91 f0 8c c6 eb 40 87 75 d5 7a d3 62 84 8b cf 72 9c 29 0c ba f7 1c fa 2d a8 fe df 2c 83 5f 66 59 ae 07 17 fc f9 63 65 08 27 42 34 22 8e 4f 19 af d4 3b e7 96 d2 ae 32 1b 94 c0 79 ec 9b cb 20 1e 2c e6 fe 68 11
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server key exchange A
+OpenSSL: RX ver=0x303 content_type=22 (handshake/server hello done)
+OpenSSL: Message - hexdump(len=4): 0e 00 00 00
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read server done A
+OpenSSL: TX ver=0x303 content_type=22 (handshake/client key exchange)
+OpenSSL: Message - hexdump(len=70): 10 00 00 42 41 04 8f 3b fc b2 83 26 f7 bc 9b 85 b1 57 60 ce 39 7c c5 6e 32 04 9f b1 6c e1 12 dc d2 79 13 d7 cf 64 b3 51 87 b6 f7 c0 c0 ea 25 ac 92 29 8d 31 9b ef 56 7f 83 03 40 53 af 36 fe d5 58 b8 6f 00 41 0c
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 write client key exchange A
+OpenSSL: TX ver=0x303 content_type=20 (change cipher spec/)
+OpenSSL: Message - hexdump(len=1): 01
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 write change cipher spec A
+OpenSSL: TX ver=0x303 content_type=22 (handshake/finished)
+OpenSSL: Message - hexdump(len=16): 14 00 00 0c 17 82 ae 14 97 77 5f 4d cf e9 bf 4e
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 write finished A
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 flush data
+SSL: (where=0x1002 ret=0xffffffff)
+SSL: SSL_connect:error in SSLv3 read finished A
+SSL: (where=0x1002 ret=0xffffffff)
+SSL: SSL_connect:error in SSLv3 read finished A
+SSL: SSL_connect - want more data
+SSL: 126 bytes pending from ssl_out
+SSL: 126 bytes left to be sent out (of total 126 bytes)
+EAP: method process -> ignore=FALSE methodState=MAY_CONT decision=FAIL eapRespData=0x24b17e0
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=132)
+TX EAP -> RADIUS - hexdump(len=132): 02 05 00 84 15 00 16 03 03 00 46 10 00 00 42 41 04 8f 3b fc b2 83 26 f7 bc 9b 85 b1 57 60 ce 39 7c c5 6e 32 04 9f b1 6c e1 12 dc d2 79 13 d7 cf 64 b3 51 87 b6 f7 c0 c0 ea 25 ac 92 29 8d 31 9b ef 56 7f 83 03 40 53 af 36 fe d5 58 b8 6f 00 41 0c 14 03 03 00 01 01 16 03 03 00 28 fb 73 2d b2 9b 19 47 eb 5a 77 84 ed 73 c7 75 2d 61 42 3a 03 8a 66 b5 27 25 46 ce 97 6c 02 7b 5f 4e 58 2a b0 73 4c 60 39
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=5 length=283
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=134
+      Value: 02050084150016030300461000004241048f3bfcb28326f7bc9b85b15760ce397cc56e32049fb16ce112dcd27913d7cf64b35187b6f7c0c0ea25ac92298d319bef567f83034053af36fed558b86f00410c1403030001011603030028fb732db29b1947eb5a7784ed73c7752d61423a038a66b5272546ce976c027b5f4e582ab0734c6039
+   Attribute 24 (State) length=18
+      Value: d253ec83d656f903075e61967c05b60e
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 5b7a5bb6e86a5f6edccb4c98a7131231
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+Received 119 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=11 (Access-Challenge) identifier=5 length=119
+   Attribute 80 (Message-Authenticator) length=18
+      Value: 81d8146e58a6b92e1ddc4ab6279f525e
+   Attribute 79 (EAP-Message) length=63
+      Value: 0106003d1580000000331403030001011603030028a127035377fc66a3446c46a0a7f710c0b86a92b71fa7a9bc8b2af6bb17336b69c94cc981b18d1a9c
+   Attribute 24 (State) length=18
+      Value: d253ec83d755f903075e61967c05b60e
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.82 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=1 id=6 len=61) from RADIUS server: EAP-Request-TTLS (21)
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Request id=6 method=21 vendor=0 vendorMethod=0
+EAP: EAP entering state METHOD
+SSL: Received packet(len=61) - Flags 0x80
+SSL: TLS Message Length: 51
+OpenSSL: RX ver=0x303 content_type=20 (change cipher spec/)
+OpenSSL: Message - hexdump(len=1): 01
+OpenSSL: RX ver=0x303 content_type=22 (handshake/finished)
+OpenSSL: Message - hexdump(len=16): 14 00 00 0c 73 6d 67 01 07 82 2d 81 86 8f d9 3f
+SSL: (where=0x1001 ret=0x1)
+SSL: SSL_connect:SSLv3 read finished A
+SSL: (where=0x20 ret=0x1)
+SSL: (where=0x1002 ret=0x1)
+SSL: 0 bytes pending from ssl_out
+OpenSSL: Handshake finished - resumed=0
+SSL: No Application Data included
+SSL: No data to be sent out
+EAP-TTLS: TLS done, proceed to Phase 2
+EAP-TTLS: Derived key - hexdump(len=64): 24 18 74 08 dd 35 dd f1 37 85 23 50 13 f3 51 5d 81 e5 70 4b 7b cb 67 99 cf f5 d0 ae ef 00 62 47 f4 a7 c5 6d 19 f3 1b 2c 0b 75 f3 f7 47 1a bc 59 33 80 b9 a4 a4 66 a0 d4 97 d2 5a 04 b0 15 71 fa
+EAP-TTLS: Derived EMSK - hexdump(len=64): 84 cd b5 38 05 c9 a0 80 f7 1f ed 06 42 4a 71 b7 4a 57 8c 42 e4 39 a3 7f c8 7b f1 51 ec cc 6c 59 de 09 0c da 70 3e 4d c0 e1 9e 57 57 9a 93 54 7f ba 35 8e 1a a6 67 10 03 0c 58 00 31 f8 27 bc a0
+EAP-TTLS: Derived Session-Id - hexdump(len=65): 15 67 c4 5e 93 88 4b 09 a3 98 b2 f5 3a e7 95 84 1e a1 d2 ec 6f 10 c9 d4 f3 08 c8 b0 17 cf 68 ab bb 28 da 85 42 36 26 43 85 db aa 82 ea 3b d2 e2 6d 6d 50 62 17 f9 4e 96 18 9e 2e 7f 5d 16 33 a8 88
+EAP-TTLS: received 0 bytes encrypted data for Phase 2
+EAP-TTLS: empty data in beginning of Phase 2 - use fake EAP-Request Identity
+EAP-TTLS: Phase 2 PAP Request
+EAP-TTLS: Encrypting Phase 2 data - hexdump(len=56): 00 00 00 01 40 00 00 20 61 6e 6f 6e 79 6d 6f 75 73 40 74 61 6b 6d 69 6e 67 2e 65 64 75 2e 74 77 00 00 00 02 40 00 00 18 61 6e 6f 6e 79 6d 6f 75 73 00 00 00 00 00 00 00
+SSL: 85 bytes left to be sent out (of total 85 bytes)
+EAP-TTLS: Authentication completed successfully
+EAP: method process -> ignore=FALSE methodState=DONE decision=COND_SUCC eapRespData=0x24abe10
+EAP: Session-Id - hexdump(len=65): 15 67 c4 5e 93 88 4b 09 a3 98 b2 f5 3a e7 95 84 1e a1 d2 ec 6f 10 c9 d4 f3 08 c8 b0 17 cf 68 ab bb 28 da 85 42 36 26 43 85 db aa 82 ea 3b d2 e2 6d 6d 50 62 17 f9 4e 96 18 9e 2e 7f 5d 16 33 a8 88
+EAP: EAP entering state SEND_RESPONSE
+EAP: EAP entering state IDLE
+EAPOL: SUPP_BE entering state RESPONSE
+EAPOL: txSuppRsp
+WPA: eapol_test_eapol_send(type=0 len=91)
+TX EAP -> RADIUS - hexdump(len=91): 02 06 00 5b 15 00 17 03 03 00 50 fb 73 2d b2 9b 19 47 ec 3d be 41 6f c2 93 59 d5 b9 ea e2 6d e0 f0 76 a7 5d b0 bd 1d 3f 1e bd 1d 5a 7d fa 72 b9 05 dd 32 7f 96 67 ca 12 20 9a d6 a9 f8 fc d3 57 be a2 80 60 91 50 ef ce b1 ba 5b 5e cd e5 4c 77 5b 1f 02 cf b7 58 8c b8 d8 47 99
+Encapsulating EAP message into a RADIUS packet
+  Copied RADIUS State Attribute
+Sending RADIUS message to authentication server
+RADIUS message: code=1 (Access-Request) identifier=6 length=242
+   Attribute 1 (User-Name) length=26
+      Value: 'anonymous@takming.edu.tw'
+   Attribute 4 (NAS-IP-Address) length=6
+      Value: 127.0.0.1
+   Attribute 31 (Calling-Station-Id) length=19
+      Value: '02-00-00-00-00-01'
+   Attribute 12 (Framed-MTU) length=6
+      Value: 1400
+   Attribute 61 (NAS-Port-Type) length=6
+      Value: 19
+   Attribute 6 (Service-Type) length=6
+      Value: 2
+   Attribute 77 (Connect-Info) length=24
+      Value: 'CONNECT 11Mbps 802.11b'
+   Attribute 79 (EAP-Message) length=93
+      Value: 0206005b15001703030050fb732db29b1947ec3dbe416fc29359d5b9eae26de0f076a75db0bd1d3f1ebd1d5a7dfa72b905dd327f9667ca12209ad6a9f8fcd357bea280609150efceb1ba5b5ecde54c775b1f02cfb7588cb8d84799
+   Attribute 24 (State) length=18
+      Value: d253ec83d755f903075e61967c05b60e
+   Attribute 80 (Message-Authenticator) length=18
+      Value: a5f37bad8a849b50ce6155dd1dab3a78
+Next RADIUS client retransmit in 3 seconds
+EAPOL: SUPP_BE entering state RECEIVE
+STA 02:00:00:00:00:01: Resending RADIUS message (id=6)
+
+Next RADIUS client retransmit in 6 seconds
+Received 44 bytes from RADIUS server
+Received RADIUS message
+RADIUS message: code=3 (Access-Reject) identifier=6 length=44
+   Attribute 80 (Message-Authenticator) length=18
+      Value: f61047ac56c079b3ddb5b69aa1a16c0a
+   Attribute 79 (EAP-Message) length=6
+      Value: 04060004
+STA 02:00:00:00:00:01: Received RADIUS packet matched with a pending request, round trip time 0.84 sec
+
+RADIUS packet matching with station
+decapsulated EAP packet (code=4 id=6 len=4) from RADIUS server: EAP Failure
+EAPOL: Received EAP-Packet frame
+EAPOL: SUPP_BE entering state REQUEST
+EAPOL: getSuppRsp
+EAP: EAP entering state RECEIVED
+EAP: Received EAP-Failure
+EAP: Status notification: completion (param=failure)
+EAP: EAP entering state FAILURE
+CTRL-EVENT-EAP-FAILURE EAP authentication failed
+EAPOL: SUPP_PAE entering state HELD
+EAPOL: SUPP_BE entering state RECEIVE
+EAPOL: SUPP_BE entering state FAIL
+EAPOL: SUPP_BE entering state IDLE
+eapol_sm_cb: result=0
+EAPOL: EAP key not available
+EAPOL: EAP Session-Id not available
+WPA: Clear old PMK and PTK
+EAP: deinitialize previously used EAP method (21, TTLS) at EAP deinit
+ENGINE: engine deinit
+MPPE keys OK: 0  mismatch: 1
+FAILURE
+</pre>
+</body></html>
