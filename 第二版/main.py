@@ -65,8 +65,7 @@ def log_analyze(realm):
     傳入 realm (如 mail.edu.tw)
     回傳 DNS,PEAP-MSCHAPv2 Status,PEAP-MSCHAPv2 Cert (Base64),TTLS-PAP Status,TTLS-PAP Cert (Base64)
     """
-    logfile = realm + ".html" # html 檔案位置
-    with open(logfile, "r", encoding="utf-8") as file:
+    with open("output.html", "r", encoding="utf-8") as file:
         content = file.read()
     # 讀取 DNS
     match = re.search(r"DNS:\s*(.+)", content)
