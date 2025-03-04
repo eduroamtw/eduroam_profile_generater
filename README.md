@@ -12,5 +12,5 @@
     <!-- 作業要來不及寫了，先推 by chilin.h -->
 
 - 250304 update log
-    - Fixed: Line 47: Copy file issue
+    - Fixed: `Line 47: Copy file issue`
     - add database feature (csv)
