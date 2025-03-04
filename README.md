@@ -7,7 +7,10 @@
 - 憑證從 log 中取出
 - 將 PEAP-MSCHAPv2 與 TTLS-PAP 憑證分離
 - 待修復
-    - Line 47: Copy file issue 待修復
     - 憑證需要拆分至根憑證
     - 沒 fuzz 過，可能會有大量非預期輸入導致 Crach
     <!-- 作業要來不及寫了，先推 by chilin.h -->
+
+- 250304 update log
+    - Fixed: Line 47: Copy file issue
+    - add database feature (csv)
