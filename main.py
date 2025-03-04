@@ -6,6 +6,7 @@ import requests
 import csv
 import os
 import base64
+import datetime
 
 def spider(realm):
     """
@@ -115,8 +116,6 @@ def log_analyze(realm):
     d=pap_found
     return a,b,c,d,e
     
-
-
 def export_cert(filename,method,cert_content): # 傳入整段 log
     """
     傳入 filename,method,cert_content
@@ -144,11 +143,11 @@ def export_cert(filename,method,cert_content): # 傳入整段 log
     # 將修改後的內容寫回檔案
 
 def profile_generate(realm,name,type,mschapv2Stat,papStat,dns,url,mschapCert,papCert):
+
     """
     傳入設定檔所需要的參數，將會自動建立設定檔
     回傳設定檔檔名
     """
-
     if mschapv2Stat and papStat == True:
         source_file = 'Template/eduroam-eap-generic-anonymous-Both.eap-config'
     elif papStat == True:
@@ -195,6 +194,14 @@ def profile_generate(realm,name,type,mschapv2Stat,papStat,dns,url,mschapCert,pap
 
     return rt
 
+def database_log(realm,papstat,mschapv2stat,dns,pap_cert,mschapv2_cert,filename="log.csv"):
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(filename, mode="a", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        if file.tell() == 0:
+            writer.writerow(["Time", "realm", "pap_stat", "mschapv2_stat", "dns",'cert_pap','cert_mschapv2'])
+        writer.writerow([current_time, realm, pap_stat, mschapv2_stat, dns, pap_cert, mschapv2_cert])
+
 if __name__ == "__main__":
     realm_input = input("請輸入您想要產生設定檔的 realm (例如 mail.edu.tw): ")
     if not realm_input:
@@ -206,6 +213,8 @@ if __name__ == "__main__":
 
         if status_code == 0: # 只有 status_code 為 0 (正常) 時才繼續分析
             dns, mschapv2_stat, mschapv2_cert, pap_stat, pap_cert = log_analyze(realm_input)
+
+            database_log(realm,pap_stat,mschapv2_stat,dns,pap_cert,mschapv2_cert)
 
             config_filename = profile_generate(
                 realm=realm,
