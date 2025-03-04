@@ -44,7 +44,7 @@ def spider(realm):
     # 執行 curl 指令
     subprocess.run(curl_command, shell=True)
     print(account + " 下載完畢")
-    os.system(f"cp ./output.html ./archive/html/{realm}.html")
+    os.system(f"cp ./output.html ./html/{realm}.html")
 
     # 讀取 output.html 檔案內容
     with open("output.html", "r", encoding="utf-8") as file:
