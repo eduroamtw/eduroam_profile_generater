@@ -306,9 +306,9 @@ def profile_generate(realm,name,short_name,type,mschapv2Stat,papStat,dns,url,msc
     with open(profile_path + "/eduroam-eap-generic-" + short_name + ".eap-config", "w", encoding="utf-8") as file:
         file.write(final_config)
 
-    rt=realm + ".eap-config"
+    profile_filename = realm + ".eap-config"
 
-    return rt
+    return profile_filename
 
 def database_log(realm,papstat,mschapv2stat,dns,pap_cert,mschapv2_cert,filename=log_path + "/" + log_filename):
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
