@@ -1,38 +1,40 @@
 # eduroam_profile_generater
-
-- 這是一個用於生成 eduroam 自動生成設定檔的工具。eduroam 是一個全球性的教育網路漫遊服務，讓教育機構的成員可以在其他參與機構使用無線網路。
-
-## 第一版
-- 憑證使用 Mozilla CA Database 尋找
-
-## 第二版
-
-- 憑證從 log 中取出
-- 將 PEAP-MSCHAPv2 與 TTLS-PAP 憑證分離
+這是一個讓組織管理員或終端使用者可以輕易生成 eduroam WiFi 設定檔的工具，該設定檔相容於 geteduroam 與 eduroam CAT 程式。<br>
+eduroam 是一個全球性的教育網路漫遊服務，讓教育機構的成員可以在其他參與機構使用無線網路。<br>
+使用此程式，需要您提供登入帳號 的 Realm (帳號 @ 後的資訊)，不需要真實帳號密碼。
 
 ## 功能特點
-
-- 生成 eduroam 網路配置文件
-- 支援多種認證方式
-- 可自定義網路設定
-- 支援不同作業系統的配置文件格式
+- 支援多個認證伺服器來源
+    - 公開測試站點
+    - RADIUS Server (需要 eapol_test，目前僅 Linux 可用，Windows 建議使用 WSL)
+- 憑證處理自動化
+    - 從 log 中的 OpenSSL hex dump 直接撈取憑證，不依賴其他第三方服務
+    - 撈取憑證後，自動追溯該憑證 Root CA
+- 多種檔案同時產出
+    - 設定檔
+    - RADIUS Server Certificate
+    - RADIUS Server CA Certificate
+- 支援認證方式
+    - EAP-PEAP-MSCHAPv2
+    - EAP-TTLS-PAP
 
 ## 系統需求
-
-- Python 3.8 或更高版本
-- pip（Python 套件管理器）
+- Python 3.8 或更高版本（可執行 `python -V` 確認版本）
+- pip（可執行 `pip -V` 確認是否運作正常）
+- OpenSSL (可執行 `openssl -v` 確認是否運作正常)
 
 ## 安裝步驟
-
-1. git clone：
+1. 複製儲存庫：
 ```bash
-git clone https://github.com/eduroamtw/eduroam_profile_generater/tree/version_2
+git clone https://github.com/eduroamtw/eduroam_profile_generater.git
 cd eduroam_profile_generater
 ```
 
 2. 安裝依賴套件：
 ```bash
-pip install -r requirements.txt
+virtualenv edurprofgen
+source edurprofgen/bin/activate
+python3 -m pip install -r requirements.txt
 ```
 
 ## 使用方法
@@ -50,17 +52,17 @@ python3 main.py
 
 ## 注意事項
 
-- 請確保生成的配置文件符合目標機構的安全要求
-- 建議在測試環境中先進行測試
-- 請妥善保管生成的配置文件
+1. 此程式並未執行帳號有效性測試，僅根據憑證回傳有無判斷 RADIUS 是否接受認證。在公開散布設定檔前，請進行人工測試複驗，確認是否能正常使用。
+2. 本程式主要為分析 log 檔案，並提取所需資訊，製成設定檔。我們不對帳號測試網站回傳的資料做任何擔保，如果你是 eduroam SP 或 iDP，建議優先使用貴單位的 RADIUS Server。
+3. 如貴單位已經支援官方 eduroam CAT 服務，則建議使用官方服務 [Link](https://cat.eduroam.org/)。
 
 ## 貢獻指南
 
-歡迎提交 Issue 或 Pull Request 來協助改進此專案。
+歡迎開啟 Issue 或 Pull Request 來協助改進此專案。
 
 ## 聯絡方式
 
-如有任何問題或建議，請透過以下方式聯絡：
+如果有任何問題或建議，歡迎透過以下方式聯絡我們：
 
-- 提交 Issue
-- 發送 Email 至：[eduroamtw@googlegroups.com]
+- 開啟 Issue
+- 傳送 Email 至：[eduroamtw@googlegroups.com](mailto:eduroamtw@googlegroups.com)

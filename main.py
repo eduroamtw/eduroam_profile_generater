@@ -306,9 +306,9 @@ def profile_generate(realm,name,short_name,type,mschapv2Stat,papStat,dns,url,msc
     with open(profile_path + "/eduroam-eap-generic-" + short_name + ".eap-config", "w", encoding="utf-8") as file:
         file.write(final_config)
 
-    rt=realm + ".eap-config"
+    profile_filename = realm + ".eap-config"
 
-    return rt
+    return profile_filename
 
 def database_log(realm,papstat,mschapv2stat,dns,pap_cert,mschapv2_cert,filename=log_path + "/" + log_filename):
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -325,7 +325,9 @@ if __name__ == "__main__":
         print("您沒有輸入 realm，程式終止。")
     else:
         print(f"您輸入的 realm 是: {realm_input}")
-        
+        print(f"正在連線認證伺服器並取得設定資訊，請稍後...")
+        print(f"此過程約需要一分鐘左右。")
+
         # spider_ustc_seesea(realm_input,source_id)
         # source id = 0: 中國科大 (https)
         # source id = 0: 西安科大 (http)
