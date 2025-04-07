@@ -1,21 +1,18 @@
 # eduroam_profile_generater
-
-- 這是一個用於生成 eduroam 自動生成設定檔的工具。eduroam 是一個全球性的教育網路漫遊服務，讓教育機構的成員可以在其他參與機構使用無線網路。
-
-## 第一版
-- 憑證使用 Mozilla CA Database 尋找
-
-## 第二版
-
-- 憑證從 log 中取出
-- 將 PEAP-MSCHAPv2 與 TTLS-PAP 憑證分離
+這是一個讓組織管理員或終端使用者可以輕易生成 eduroam WiFi 設定檔的工具，該格式相容於 geteduroam 與 eduroam CAT 程式。<br>
+eduroam 是一個全球性的教育網路漫遊服務，讓教育機構的成員可以在其他參與機構使用無線網路。<br>
+使用此程式，需要您提供登入帳號 的 Realm (帳號 @ 後的資訊)，不需要真實帳號密碼。
 
 ## 功能特點
-
-- 生成 eduroam 網路配置文件
-- 支援多種認證方式
-- 可自定義網路設定
-- 支援不同作業系統的配置文件格式
+- 多種資訊來源
+    - 一般使用者：於公開測試網站中直接取得 log 分析
+    - iDP 所有者：直連單位內的 RADIUS Server
+- 生成多種檔案
+    - 設定檔
+    - 伺服器 CA 憑證
+- 認證方式
+    - EAP-PEAP-MSCHAPv2
+    - EAP-TTLS-PAP
 
 ## 系統需求
 
