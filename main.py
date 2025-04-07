@@ -325,7 +325,9 @@ if __name__ == "__main__":
         print("您沒有輸入 realm，程式終止。")
     else:
         print(f"您輸入的 realm 是: {realm_input}")
-        
+        print(f"正在連線認證伺服器並取得設定資訊，請稍後...")
+        print(f"此過程約需要一分鐘左右。")
+
         # spider_ustc_seesea(realm_input,source_id)
         # source id = 0: 中國科大 (https)
         # source id = 0: 西安科大 (http)
