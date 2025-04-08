@@ -1,7 +1,9 @@
 # eduroam_profile_generater
 這是一個讓組織管理員或終端使用者可以輕易生成 eduroam WiFi 設定檔的工具，該設定檔相容於 geteduroam 與 eduroam CAT 程式。<br>
 eduroam 是一個全球性的教育網路漫遊服務，讓教育機構的成員可以在其他參與機構使用無線網路。<br>
-使用此程式，需要您提供登入帳號 的 Realm (帳號 @ 後的資訊)，不需要真實帳號密碼。
+使用此程式，需要您提供登入帳號 的 Realm (帳號 @ 後的資訊)，不需要真實帳號密碼。<br>
+如果您是一般使用者，我們更推薦您使用我們的 Colab 版本，省去您安裝環境的時間。<br>
+Colab 版本：[GitHub](https://github.com/eduroamtw/eduroam_profile_generater_colab) [Colab](https://colab.research.google.com/github/eduroamtw/eduroam_profile_generater_colab/blob/main/eduroam_profile_generater_colab.ipynb)<br>
 
 ## 功能特點
 - 支援多個認證伺服器來源
