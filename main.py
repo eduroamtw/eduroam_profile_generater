@@ -140,7 +140,7 @@ def spider_local(realm):
     status_code = 0
     return realm,status_code
 
-def web_log_analyze(realm):
+def log_analyze(realm):
     """
     傳入 realm (如 mail.edu.tw)
     回傳 DNS,PEAP-MSCHAPv2 Status,PEAP-MSCHAPv2 Cert (Base64),TTLS-PAP Status,TTLS-PAP Cert (Base64)
@@ -181,15 +181,15 @@ def web_log_analyze(realm):
     # 判斷並輸出結果
     if mschapv2_found and pap_found == True:
         print("MSCHAP v2 / PAP 憑證已拿取")
-        mschapv2_cert = web_export_cert(realm, "PEAP-MSCHAPv2", content_mschapv2)
-        pap_cert = web_export_cert(realm, "TTLS-PAP", content_pap)
+        mschapv2_cert = export_cert(realm, "PEAP-MSCHAPv2", content_mschapv2)
+        pap_cert = export_cert(realm, "TTLS-PAP", content_pap)
     elif pap_found == True:
         print("PAP 憑證已拿取 / MSCHAP v2 憑證未拿取")
         mschapv2_cert = "NULL"
-        pap_cert = web_export_cert(realm, "TTLS-PAP", content_pap)
+        pap_cert = export_cert(realm, "TTLS-PAP", content_pap)
     elif mschapv2_found  == True:
         print("MSCHAP v2 憑證已拿取 / PAP 憑證未拿取")
-        mschapv2_cert = web_export_cert(realm, "PEAP-MSCHAPv2", content_mschapv2)
+        mschapv2_cert = export_cert(realm, "PEAP-MSCHAPv2", content_mschapv2)
         pap_cert = "NULL"
     else:
         print("MSCHAP v2 / PAP 憑證未拿取，未知的錯誤")
@@ -198,7 +198,7 @@ def web_log_analyze(realm):
 
     return dns_value, mschapv2_found, mschapv2_cert, pap_found, pap_cert
 
-def web_export_cert(filename,method,cert_content): # 傳入整段 log
+def export_cert(filename,method,cert_content): # 傳入整段 log
     """
     傳入 filename,method,cert_content
     回傳 base64 憑證檔內容 (去頭去尾)
@@ -336,7 +336,7 @@ def app():
         # realm,status_code = spider_local(realm_input)
 
         if status_code == 0: # 只有 status_code 為 0 (正常) 時才繼續分析
-            dns, mschapv2_stat, mschapv2_cert, pap_stat, pap_cert = web_log_analyze(realm_input)
+            dns, mschapv2_stat, mschapv2_cert, pap_stat, pap_cert = log_analyze(realm_input)
 
             database_log(realm,pap_stat,mschapv2_stat,dns,pap_cert,mschapv2_cert)
 
