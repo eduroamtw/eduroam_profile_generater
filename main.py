@@ -12,6 +12,7 @@ import json
 # 帳號設定
 account = "anonymous"
 password = "TestViaEduroamTWProfileProj"
+server_id = "0"
 
 # 輸出位置
 template_path = "./template"
@@ -68,12 +69,12 @@ def spider_ustc_seesea(realm,source):
     """
 
     # 爬網頁
-    if source == 1:
+    if source == "1":
         url = "http://eduroam.seesea.site/cgi-bin/eduroam-test.cgi"
     else:
         url = "https://eduroam.ustc.edu.cn/cgi-bin/eduroam-test.cgi"
 
-    send_url = f"{url}?login={requests.utils.quote(account + "@" + realm)}&password={requests.utils.quote(password)}"
+    send_url = url + "?login=" + requests.utils.quote(account + "@" + realm) + "&password=" + requests.utils.quote(password)
     response = requests.get(send_url)
 
     with open(ustc_seesea_html_path + "/" + realm + ".html", "wb") as file:
@@ -306,7 +307,7 @@ def profile_generate(realm,name,short_name,type,mschapv2Stat,papStat,dns,url,msc
     with open(profile_path + "/eduroam-eap-generic-" + short_name + ".eap-config", "w", encoding="utf-8") as file:
         file.write(final_config)
 
-    profile_filename = realm + ".eap-config"
+    profile_filename = "eduroam-eap-generic-" + short_name + ".eap-config"
 
     return profile_filename
 
@@ -316,23 +317,22 @@ def database_log(realm,papstat,mschapv2stat,dns,pap_cert,mschapv2_cert,filename=
         writer = csv.writer(file)
         if file.tell() == 0:
             writer.writerow(["Time", "realm", "pap_stat", "mschapv2_stat", "dns",'cert_pap','cert_mschapv2'])
-        writer.writerow([current_time, realm, pap_stat, mschapv2_stat, dns, pap_cert, mschapv2_cert])
+        writer.writerow([current_time, realm, papstat, mschapv2stat, dns, pap_cert, mschapv2_cert])
 
-if __name__ == "__main__":
+def app():
     environment_test()
     realm_input = input("請輸入您想要產生設定檔的 realm (例如 mail.edu.tw): ")
     if not realm_input:
         print("您沒有輸入 realm，程式終止。")
     else:
         print(f"您輸入的 realm 是: {realm_input}")
+        server_id = input("請選擇你想使用的伺服器\n0: 中國科大 (預設)\n1: 西安科大\n")
         print(f"正在連線認證伺服器並取得設定資訊，請稍後...")
         print(f"此過程約需要一分鐘左右。")
-
-        # spider_ustc_seesea(realm_input,source_id)
         # source id = 0: 中國科大 (https)
-        # source id = 0: 西安科大 (http)
-        realm,status_code = spider_ustc_seesea(realm_input,0)
-        # realm,status_code = spider_ustc_seesea(realm_input,1)
+        # source id = 1: 西安科大 (http)
+        realm,status_code = spider_ustc_seesea(realm_input,server_id)
+        # spider_ustc_seesea(realm_input,source_id)
         # realm,status_code = spider_local(realm_input)
 
         if status_code == 0: # 只有 status_code 為 0 (正常) 時才繼續分析
@@ -362,3 +362,6 @@ if __name__ == "__main__":
                 print("\n設定檔產生失敗。")
         else:
             print("\n網頁下載失敗，請檢查網路連線或稍後再試。")
+
+if __name__ == "__main__":
+    app()
