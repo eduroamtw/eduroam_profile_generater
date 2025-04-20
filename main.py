@@ -134,8 +134,8 @@ def spider_local(realm):
     with open(eapol_test_conf_path + "/" + realm + "_TTLS_PAP.conf", "w", encoding="utf-8") as file:
         file.write(eapol_test_conf_ttls_pap)
 
-    os.system(f"{eapol_test_program_path} -c {eapol_test_conf_path}/{realm}_PEAP_MSCHAPv2.conf -a {radius_ip} -s {radius_key} -o test > {eapol_test_log_path}/{realm}_PEAP_MSCHAPv2.log")
-    os.system(f"{eapol_test_program_path} -c {eapol_test_conf_path}/{realm}_TTLS_PAP.conf -a {radius_ip} -s {radius_key} -o test2 > {eapol_test_log_path}/{realm}_TTLS_PAP.log")
+    os.system(f"{eapol_test_program_path} -c {eapol_test_conf_path}/{realm}_PEAP_MSCHAPv2.conf -a {radius_ip} -s {radius_key} > {eapol_test_log_path}/{realm}_PEAP_MSCHAPv2.log")
+    os.system(f"{eapol_test_program_path} -c {eapol_test_conf_path}/{realm}_TTLS_PAP.conf -a {radius_ip} -s {radius_key} > {eapol_test_log_path}/{realm}_TTLS_PAP.log")
     status_code = 0
     return realm,status_code
 
