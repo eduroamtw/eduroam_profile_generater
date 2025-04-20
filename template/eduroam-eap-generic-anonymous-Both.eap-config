@@ -4,25 +4,6 @@
     <AuthenticationMethods>
       <AuthenticationMethod>
         <EAPMethod>
-          <Type>25</Type>
-        </EAPMethod>
-        <ServerSideCredential>
-          <CA format="X.509" encoding="base64">#PEAP_MSCHAPv2Cert#</CA>
-          <ServerID>#Domain#</ServerID>
-        </ServerSideCredential>
-        <ClientSideCredential>
-          <OuterIdentity>anonymous@#Realm#</OuterIdentity>
-          <InnerIdentitySuffix>#Realm#</InnerIdentitySuffix>
-          <InnerIdentityHint>true</InnerIdentityHint>
-        </ClientSideCredential>
-        <InnerAuthenticationMethod>
-          <EAPMethod>
-            <Type>26</Type>
-          </EAPMethod>
-        </InnerAuthenticationMethod>
-      </AuthenticationMethod>
-      <AuthenticationMethod>
-        <EAPMethod>
           <Type>21</Type>
         </EAPMethod>
         <ServerSideCredential>
@@ -38,6 +19,25 @@
           <NonEAPAuthMethod>
             <Type>1</Type>
           </NonEAPAuthMethod>
+        </InnerAuthenticationMethod>
+      </AuthenticationMethod>
+      <AuthenticationMethod>
+        <EAPMethod>
+          <Type>25</Type>
+        </EAPMethod>
+        <ServerSideCredential>
+          <CA format="X.509" encoding="base64">#PEAP_MSCHAPv2Cert#</CA>
+          <ServerID>#Domain#</ServerID>
+        </ServerSideCredential>
+        <ClientSideCredential>
+          <OuterIdentity>anonymous@#Realm#</OuterIdentity>
+          <InnerIdentitySuffix>#Realm#</InnerIdentitySuffix>
+          <InnerIdentityHint>true</InnerIdentityHint>
+        </ClientSideCredential>
+        <InnerAuthenticationMethod>
+          <EAPMethod>
+            <Type>26</Type>
+          </EAPMethod>
         </InnerAuthenticationMethod>
       </AuthenticationMethod>
     </AuthenticationMethods>
