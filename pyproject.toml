@@ -14,8 +14,4 @@ dependencies = [
 ]
 
 [project.scripts]
-eduroam-profile = "src.app:main"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+gen = "src.app:main"

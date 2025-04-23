@@ -2,3 +2,4 @@
 output/
 radius.json
 .venv
+__pycache__/
