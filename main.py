@@ -120,10 +120,7 @@ def spider_local(realm):
     radius_key = radius_info["radius_key"]
 
     with open(template_path + "/" + eapol_test_conf_peap_mschapv2_filename, "r", encoding="utf-8") as file:
-        eapol_test_conf_peap_mschapv2 = file.read()
-    eapol_test_conf_peap_mschapv2 = eapol_test_conf_peap_mschapv2.replace('#Username#', account)
-    eapol_test_conf_peap_mschapv2 = eapol_test_conf_peap_mschapv2.replace('#Realm#', realm)
-    eapol_test_conf_peap_mschapv2 = eapol_test_conf_peap_mschapv2.replace('#Password#', password)
+        eapol_test_conf_peap_mschapv2 = file.read().replace('#Username#', account)  .replace('#Realm#', realm) .replace('#Password#', password)
     with open(eapol_test_conf_path + "/" + realm + "_PEAP_MSCHAPv2.conf", "w", encoding="utf-8") as file:
         file.write(eapol_test_conf_peap_mschapv2)
 

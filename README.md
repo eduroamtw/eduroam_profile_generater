@@ -21,8 +21,7 @@ Colab 版本：[GitHub](https://github.com/eduroamtw/eduroam_profile_generater_c
     - EAP-TTLS-PAP
 
 ## 系統需求
-- Python 3.8 或更高版本（可執行 `python -V` 確認版本）
-- pip（可執行 `pip -V` 確認是否運作正常）
+- Python 3.13 或更高版本（可執行 `python -V` 確認版本）
 - OpenSSL (可執行 `openssl -v` 確認是否運作正常)
 
 ## 安裝步驟
