@@ -1,0 +1,3 @@
+"""
+Eduroam Profile Generator package.
+"""

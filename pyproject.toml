@@ -12,3 +12,10 @@ dependencies = [
     "cryptography>=41.0.0",
     "xmltodict>=0.13.0",
 ]
+
+[project.scripts]
+eduroam-profile = "src.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
