@@ -1,5 +1,6 @@
 .git/
 output/
 radius.json
+codemcp.toml
 .venv
 __pycache__/
