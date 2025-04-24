@@ -1,0 +1,17 @@
+[project]
+name = "eduroam-profile-generater"
+version = "0.1.0"
+description = "Easily generate eduroam WiFi profiles!!!"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.31.0",
+    "pyyaml>=6.0.1",
+    "jinja2>=3.1.2",
+    "python-dotenv>=1.0.0",
+    "cryptography>=41.0.0",
+    "xmltodict>=0.13.0",
+]
+
+[project.scripts]
+gen = "src.app:main"
