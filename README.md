@@ -42,7 +42,7 @@ cd eduroam_profile_generater
 2. 安裝依賴套件：
 
 ```bash
-uv venv
+uv venv venv
 source venv/bin/activate
 ```
 
